@@ -4,6 +4,7 @@
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Cardo|Playfair+Display" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8">
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/scripts.js"></script>
     <title>Run For President!</title>
@@ -91,21 +92,25 @@
     </div>
 
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-1">
       </div>
-      <div class="col-md-8">
+      <div class="col-md-10">
         <div class="panel panel-default" id="status">
           <div class="panel-heading">
             <h1><span class="title"></span> <span class="lastName"></span>'s Current Stats: </h1>
           </div>
           <div class="panel-body">
             <div class="row">
-              <div class="col-md-4">
-                <h4>Reputation Points: <span class="reputation-points"></span></h4>
-                <h4>Campaign Funds: $<span class="funds"></span>.00</h4>
+              <div class="col-md-3">
+                <h3>Reputation Points: </h3>
+                <p class="scoreNumber"><span class="reputation-points"></span></p>
               </div>
-              <div class="col-md-8">
+              <div class="col-md-6">
                 <img src="img/flag.jpg" alt="american flag" class="flag-image img-rounded">
+              </div>
+              <div class="col-md-3">
+                <h3>Campaign Funds: </h3>
+                <p class="scoreNumber"><span class="funds"></span></p>
               </div>
             </div>
 
@@ -114,7 +119,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-2">
+      <div class="col-md-1">
       </div>
     </div>
 

@@ -1,0 +1,8 @@
+@font-face{
+	font-family: 'scoreboard';
+	/*src: url('WebFont.eot');*/
+	/*src: url('WebFont.eot?#iefix') format('embedded-opentype'),*/
+	src: url('scoreboard-webfont.woff') format('woff'),
+	     url('scoreboard.ttf') format('truetype'),
+}
+/*src: url('WebFont.svg#webfont') format('svg');*/

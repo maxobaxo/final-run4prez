@@ -24,10 +24,11 @@ button {
   display: none;
   color: black;
   border: none;
+  margin-top: 1.5%;
 }
 
 .flag-image {
-  max-width: 50%;
+  max-width: 90%;
 }
 
 #status .panel-heading, #status .panel-footer {
@@ -35,6 +36,11 @@ button {
   color: white;
   font-family: 'Playfair Display', serif;
   font-family: 'Cardo', serif;
+  text-align: center;
+}
+
+.scoreNumber {
+  font-size: 140px;
   text-align: center;
 }
 
