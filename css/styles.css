@@ -16,6 +16,8 @@ body {
 button {
   display: block;
   margin: auto;
+  background-color: #017AC6;
+  color: white;
 }
 
 #status {
@@ -26,6 +28,11 @@ button {
   display: none;
 }
 
-#outcome {
+/*#outcome {
   display: none;
+}*/
+
+#outcome h2 {
+  text-align: center;
+  margin-top: 0;
 }
