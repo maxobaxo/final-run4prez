@@ -64,16 +64,29 @@
 
 <!-- pair2: focus on user decisions -->
     <div class="well decision" id="decision1">
-      <p id="prompt1">
-        You've just finished setting up your national campaign offices and organizing your supporters. You've been approached by a couple of major lobbies looking for candidates to back. Unfortunately, the two are opposed to one another. Do you throw your lot in with the plucky environmentalists or the well-connected industrialists?:
-      </p>
-      <div class="radio">
-        <label><input type="radio" name="dec1radio" value="environmental">Support Environmentalists</label>
-      </div>
-      <div class="radio">
-        <label><input type="radio" name="dec1radio" value="industrial">Support Industrialists</label>
-      <button type="button" class="btn btn-primary" id="decision1Button">Submit Decision</button>
-    </div>
+      <h2>Lobbyists Approach</h2>
+      <h4 id="prompt1">
+        You've just finished setting up your national campaign offices and organizing your supporters. You've been approached by a couple of major lobbies looking for candidates to back. Unfortunately, the two are opposed to one another.</h4>
+        <h4>Do you throw your lot in with the plucky environmentalists or the well-connected industrialists?:
+      </h4>
+      <form id="decision1Button">
+        <ul class="list-inline">
+          <li>
+            <div class="radio">
+              <label><input type="radio" name="dec1radio" value="environmental">Support Environmentalists</label>
+            </div>
+          </li>
+          <li>
+            <div class="radio">
+              <label><input type="radio" name="dec1radio" value="industrial">Support Industrialists</label>
+            </div>
+          </li>
+          <li>
+            <button type="button" class="btn">Submit Decision</button>
+          </li>
+        </ul>
+      </form>
+
     <div class="well decision" id="decision2">
 
     </div>

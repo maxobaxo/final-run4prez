@@ -28,9 +28,13 @@ button {
   display: none;
 }
 
-/*#outcome {
+.decision h2 {
+  text-align: center;
+}
+
+#outcome {
   display: none;
-}*/
+}
 
 #outcome h2 {
   text-align: center;

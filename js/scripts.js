@@ -6,9 +6,11 @@ function Candidate(name, age, gender) {
   this.reputation = 0;
   this.funding = 0;
 }
+
 showdecision1 = function(){
   $("#decision1").show()
 }
+
 Candidate.prototype.policyDec = function(){
 var radioInput1 = $("input:radio[name=dec1radio]:checked").val();
   if (radioInput1 == "environmental") {
@@ -39,6 +41,7 @@ $(document).ready(function() {
     newCandidate = new Candidate(name, age, gender);
     showdecision1();
   });
+  
   $("button#decision1Button").click(function(){
     newCandidate.policyDec();
   });
