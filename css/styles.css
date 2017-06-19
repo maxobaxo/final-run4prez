@@ -42,3 +42,9 @@ button {
 #lose {
   display: none;
 }
+.explanation {
+  display: none;
+}
+#moveon1Button {
+  display: none;
+}

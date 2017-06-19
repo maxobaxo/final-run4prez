@@ -11,13 +11,13 @@ var radioInput1 = $("input:radio[name=dec1radio]:checked").val();
   if (radioInput1 == "environmental") {
     this.reputation = this.reputation + 5;
     this.funding = this.funding + 500;
-    console.log("enviro trigger")
     console.log(this)
+    showExplanationd11();
   } else if (radioInput1 == "industrial") {
     this.reputation = this.reputation + 2;
     this.funding = this.funding + 1000;
-    console.log("industry trigger")
     console.log(this)
+    showExplanationd12();
   };
 };
 Candidate.prototype.taxesDec = function(){
@@ -69,6 +69,12 @@ $(document).ready(function() {
   lossReveal = function() {
     $("#lose").show();
   };
+  showExplanationd11 = function() {
+    $("#explanationd1-1").show()
+  };
+  showExplanationd12 = function() {
+    $("#explanationd1-2").show()
+  };
   $("#register").submit(function(event) {
     event.preventDefault();
 
@@ -80,6 +86,10 @@ $(document).ready(function() {
   });
   $("button#decision1Button").click(function(){
     newCandidate.policyDec();
+    $("button#decision1Button").hide();
+    $("button#moveon1Button").show();
+  });
+  $("button#moveon1Button").click(function(){
     $("#decision1").hide();
     $("#decision2").show();
   });
@@ -91,7 +101,6 @@ $(document).ready(function() {
   $("button#decision3Button").click(function(){
     newCandidate.attackDec();
     $("#decision3").hide();
-    
     newCandidate.winLose();
   });
   $("#final-decision-button").submit(function(event) {
