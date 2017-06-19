@@ -38,6 +38,15 @@ $(document).ready(function() {
   });
   $("#register").submit(function(event) {
     event.preventDefault();
+    var name = $("input#name").val();
+    var age = $("input#age").val();
+    var gender = $("input#gender").val()
+    var newCandidate = new Candidate(name, age, gender);
     showdecision1();
+
+  });
+
+  $("#final-decision-button").submit(function(event) {
+
   });
 });

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #decision1 {
   display: none;
 }
@@ -6,4 +7,43 @@
 }
 #decision3 {
   display: none;
+=======
+body {
+  background-color: #017AC6;
+}
+
+.jumbotron {
+  background-color: #AE083B;
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-family: 'Cardo', serif;
+}
+
+#prez-seal {
+  max-width: 85%;
+}
+
+button {
+  display: block;
+  margin: auto;
+  background-color: #017AC6;
+  color: white;
+}
+
+#status {
+  display: none;
+}
+
+.decision {
+  display: none;
+}
+
+/*#outcome {
+  display: none;
+}*/
+
+#outcome h2 {
+  text-align: center;
+  margin-top: 0;
+>>>>>>> master
 }
