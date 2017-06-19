@@ -23,6 +23,14 @@ button {
 #status {
   display: none;
   color: black;
+  border: none;
+}
+
+#status .panel-heading, #status .panel-footer {
+  background-color: #AE083B;
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-family: 'Cardo', serif;
 }
 
 .decision {
