@@ -141,6 +141,12 @@ $(document).ready(function() {
   $("button#decision1Button").click(function(){
     newCandidate.policyDec();
     $("button#decision1Button").hide();
+    $("#prompt1").hide();
+    $(".question").hide();
+    $(".reputation-points").empty();
+    $(".reputation-points").append(newCandidate.reputation);
+    $(".funds").empty();
+    $(".funds").append(newCandidate.funding);
     $("button#moveon1Button").show();
   });
 
@@ -152,6 +158,12 @@ $(document).ready(function() {
   $("button#decision2Button").click(function(){
     newCandidate.taxesDec();
     $("button#decision2Button").hide();
+    $("#prompt2").hide();
+    $(".question").hide();
+    $(".reputation-points").empty();
+    $(".reputation-points").append(newCandidate.reputation);
+    $(".funds").empty();
+    $(".funds").append(newCandidate.funding);
     $("button#moveon2Button").show();
   });
 
@@ -163,6 +175,12 @@ $(document).ready(function() {
   $("button#decision3Button").click(function(){
     newCandidate.attackDec();
     $("button#decision3Button").hide();
+    $("#prompt3").hide();
+    $(".question").hide();
+    $(".reputation-points").empty();
+    $(".reputation-points").append(newCandidate.reputation);
+    $(".funds").empty();
+    $(".funds").append(newCandidate.funding);
     $("button#moveon3Button").show();
   });
 

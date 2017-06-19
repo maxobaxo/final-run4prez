@@ -28,8 +28,9 @@ button {
 }
 
 .flag-image {
-  max-width: 90%;
+  max-width: 100%;
 }
+
 
 #status .panel-heading, #status .panel-footer {
   background-color: #AE083B;
@@ -39,9 +40,21 @@ button {
   text-align: center;
 }
 
-.scoreNumber {
-  font-size: 140px;
+.scoreBox {
+  margin: auto;
+  max-width: 90%;
   text-align: center;
+  border: 1px solid black;
+}
+
+.scoreNumber {
+  font-size: 100px;
+  text-align: center;
+}
+
+#image-center {
+  display: block;
+  margin: auto;
 }
 
 .decision {
@@ -68,7 +81,9 @@ button {
 }
 .explanation {
   display: none;
+  font-size: 20px;
 }
+
 #moveon1Button {
   display: none;
 }
