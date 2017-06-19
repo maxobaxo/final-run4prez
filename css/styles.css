@@ -22,15 +22,43 @@ button {
 
 #status {
   display: none;
+  color: black;
+  border: none;
+  margin-top: 1.5%;
+}
+
+.flag-image {
+  max-width: 90%;
+}
+
+#status .panel-heading, #status .panel-footer {
+  background-color: #AE083B;
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-family: 'Cardo', serif;
+  text-align: center;
+}
+
+.scoreNumber {
+  font-size: 140px;
+  text-align: center;
 }
 
 .decision {
   display: none;
 }
 
-/*#outcome {
+.decision h2 {
+  text-align: center;
+}
+
+.question {
+  font-style: italic;
+}
+
+#outcome {
   display: none;
-}*/
+}
 
 #outcome h2 {
   text-align: center;
