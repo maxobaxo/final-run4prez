@@ -26,11 +26,16 @@ button {
   border: none;
 }
 
+.flag-image {
+  max-width: 50%;
+}
+
 #status .panel-heading, #status .panel-footer {
   background-color: #AE083B;
   color: white;
   font-family: 'Playfair Display', serif;
   font-family: 'Cardo', serif;
+  text-align: center;
 }
 
 .decision {
