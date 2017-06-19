@@ -30,9 +30,7 @@ var radioInput1 = $("input:radio[name=dec1radio]:checked").val();
 
 //user interface logic
 $(document).ready(function() {
-  name = "Stevathor the Magnificent"
-  age = "Timeless"
-  gender = "The best option"
+  var name; age; gender;
   var radioInput1;
   var newCandidate = new Candidate(name, age, gender);
   $("button#decision1Button").click(function(){
