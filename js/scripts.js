@@ -51,13 +51,27 @@ var radioInput3 = $("input:radio[name=dec3radio]:checked").val();
     console.log(this)
   };
 };
+Candidate.prototype.winLose = function() {
+  if (this.reputation >= 9) {
+    victoryReveal();
+  } else {
+    lossReveal();
+  }
+}
 
 
 //user interface logic
 $(document).ready(function() {
   var newCandidate;
+  victoryReveal = function() {
+    $("#win").show();
+  };
+  lossReveal = function() {
+    $("#lose").show();
+  };
   $("#register").submit(function(event) {
     event.preventDefault();
+
     var name = $("input#name").val();
     var age = $("input#age").val();
     var gender = $("input#gender").val();
@@ -77,7 +91,8 @@ $(document).ready(function() {
   $("button#decision3Button").click(function(){
     newCandidate.attackDec();
     $("#decision3").hide();
-    $("#outcome").show();
+    
+    newCandidate.winLose();
   });
   $("#final-decision-button").submit(function(event) {
 
