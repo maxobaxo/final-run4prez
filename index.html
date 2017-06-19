@@ -54,25 +54,19 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- pair1: focus on initial game setup and UI -->
-
-
-
-    <!-- pair2: focus on user decisions -->
-    <div class="well decision" id="decision1">
-      <h2>Lobbyists Approach</h2>
-      <h4 id="prompt1">
-        You've just finished setting up your national campaign offices and organizing your supporters. You've been approached by a couple of major lobbies looking for candidates to back. Unfortunately, the two are opposed to one another.</h4>
-        <h4 class="question">Do you throw your lot in with the plucky environmentalists or the well-connected industrialists?:
-      </h4>
-      <p class="explanation" id="explanationd1-1">
-        <em>Your choice to court the support of the environmentalists has had a good effect on your reputation and a small positive effect on your funds as well.</em>
-      </p>
-      <p class="explanation" id="explanationd1-2">
-        <em>Your choice to court the support of the industrialists has increased your popularity among the working class. Their well-organized interest groups have made a substantial contribution to your funds as well.</em>
-      </p>
+      <div class="well decision" id="decision1">
+        <h2>Lobbyists Approach</h2>
+        <h4 id="prompt1">
+          You've just finished setting up your national campaign offices and organizing your supporters. You've been approached by a couple of major lobbies looking for candidates to back. Unfortunately, the two are opposed to one another.</h4>
+          <h4 class="question">Do you throw your lot in with the plucky environmentalists or the well-connected industrialists?:
+        </h4>
+        <p class="explanation" id="explanationd1-1">
+          <em>Your choice to court the support of the environmentalists has had a good effect on your reputation and a small positive effect on your funds as well.</em>
+        </p>
+        <p class="explanation" id="explanationd1-2">
+          <em>Your choice to court the support of the industrialists has increased your popularity among the working class. Their well-organized interest groups have made a substantial contribution to your funds as well.</em>
+        </p>
         <ul class="list-inline">
           <li>
             <div class="radio">
@@ -89,13 +83,15 @@
             <button type="button" class="btn btn-primary" id="moveon1Button">Next Event</button>
           </li>
         </ul>
-
-    </div>
+      </div>
 
       <div class="well decision" id="decision2">
-        <p id="prompt2">
-          You've been given an opportunity to speak publicly about your campagin policies. The news radio show 'Boring News Tonight with Lou Dobbs' has a full schedule though and only has time for you to speak about your tax policies. How do you use this precious airtime?:
-        </p>
+        <h2>Lobbyists Approach</h2>
+        <h4 id="prompt2">
+          You've been given an opportunity to speak publicly about your campagin policies. The news radio show 'Boring News Tonight with Lou Dobbs' has a full schedule though and only has time for you to speak about your tax policies.
+        </h4>
+        <h4 class="question">How do you use this precious airtime?:
+        </h4>
         <p class="explanation" id="explanationd2-1">
           <em>Your decision to cut taxes across the board has increased your reputation because deep down, nobody wants to pay taxes. Your funding has increased because this statement attracted more financial backers.</em>
         </p>
@@ -105,6 +101,7 @@
         <p class="explanation" id="explanationd2-3">
           <em>Your railing against government spending, while not directly answering the question, has bought some support from business interests that are passionate about the issue.</em>
         </p>
+
         <div class="radio">
           <label><input type="radio" name="dec2radio" value="cuttax">Publicly declare that you will cut taxes for <strong>everyone.</strong></label>
         </div>
@@ -143,6 +140,38 @@
         <button type="button" class="btn btn-primary" id="moveon3Button">Next Event</button>
       </div>
 
+      <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-10">
+          <div class="panel panel-default" id="status">
+            <div class="panel-heading">
+              <h1><span class="title"></span> <span class="lastName"></span>'s Current Stats: </h1>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-3">
+                  <h3>Reputation Points: </h3>
+                  <p class="scoreNumber"><span class="reputation-points"></span></p>
+                </div>
+                <div class="col-md-6">
+                  <img src="img/flag.jpg" alt="american flag" class="flag-image img-rounded">
+                </div>
+                <div class="col-md-3">
+                  <h3>Campaign Funds: </h3>
+                  <p class="scoreNumber"><span class="funds"></span></p>
+                </div>
+              </div>
+
+            </div>
+            <div class="panel-footer">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1">
+        </div>
+      </div>
+
       <div id="outcome">
         <div class="well" id="win">
           <h2>Congratulations!</h2>
@@ -153,7 +182,6 @@
           <h4>You have lost the election. Along the way, you made some poor decisions, and now you must suffer the consequences. Make that dreaded call to your competitor, and go out there and give 'em the best concession speech they've ever heard!</h4>
         </div>
       </div>
-
-
-    </body>
-  </html>
+    </div>
+  </body>
+</html>
