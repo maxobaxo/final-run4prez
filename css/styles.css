@@ -32,6 +32,10 @@ button {
   text-align: center;
 }
 
+.question {
+  font-style: italic;
+}
+
 #outcome {
   display: none;
 }

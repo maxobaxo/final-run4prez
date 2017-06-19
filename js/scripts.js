@@ -1,15 +1,17 @@
 //business logic
-function Candidate(name, age, gender) {
-  this.name = name;
+function Candidate(firstName, lastName, age, gender) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.fullName;
   this.age = age;
   this.gender = gender;
   this.reputation = 0;
   this.funding = 0;
-}
+};
 
-showdecision1 = function(){
-  $("#decision1").show()
-}
+Candidate.prototype.fullName = function() {
+  this.fullName = this.firstName + " " + this.lastName;
+};
 
 Candidate.prototype.policyDec = function(){
 var radioInput1 = $("input:radio[name=dec1radio]:checked").val();
@@ -35,13 +37,17 @@ $(document).ready(function() {
   var newCandidate;
   $("#register").submit(function(event) {
     event.preventDefault();
-    var name = $("input#name").val();
+    var firstName = $("input#first-name").val();
+    var lastName = $("input#last-name").val();
     var age = $("input#age").val();
     var gender = $("input#gender").val()
-    newCandidate = new Candidate(name, age, gender);
-    showdecision1();
+    newCandidate = new Candidate(firstName, lastName, age, gender);
+    var fullName = newCandidate.fullName();
+    $("#intro").hide();
+    $("#decision1").show();
+    console.log(newCandidate);
   });
-  
+
   $("button#decision1Button").click(function(){
     newCandidate.policyDec();
   });
