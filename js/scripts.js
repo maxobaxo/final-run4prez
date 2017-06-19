@@ -6,9 +6,6 @@ function Candidate(name, age, gender) {
   this.reputation = 0;
   this.funding = 0;
 }
-showdecision1 = function(){
-  $("#decision1").show()
-}
 Candidate.prototype.policyDec = function(){
 var radioInput1 = $("input:radio[name=dec1radio]:checked").val();
   if (radioInput1 == "environmental") {
@@ -22,8 +19,6 @@ var radioInput1 = $("input:radio[name=dec1radio]:checked").val();
     console.log("industry trigger")
     console.log(this)
   };
-  $("#decision1").hide()
-  $("#decision2").show()
 };
 Candidate.prototype.taxesDec = function(){
 var radioInput2 = $("input:radio[name=dec2radio]:checked").val();
@@ -40,10 +35,22 @@ var radioInput2 = $("input:radio[name=dec2radio]:checked").val();
     this.funding = this.funding + 500;
     console.log(this)
   };
-  $("#decision2").hide()
-  $("#decision3").show()
 };
-
+Candidate.prototype.attackDec = function(){
+var radioInput3 = $("input:radio[name=dec3radio]:checked").val();
+  if (radioInput3 == "attack") {
+    this.reputation = this.reputation + 0;
+    this.funding = this.funding - 500;
+    console.log(this)
+  } else if (radioInput3 == "giveup") {
+    this.reputation = this.reputation - 3;
+    console.log(this)
+  } else if (radioInput3 == "defend") {
+    this.reputation = this.reputation + 3;
+    this.funding = this.funding - 500;
+    console.log(this)
+  };
+};
 
 
 //user interface logic
@@ -53,15 +60,24 @@ $(document).ready(function() {
     event.preventDefault();
     var name = $("input#name").val();
     var age = $("input#age").val();
-    var gender = $("input#gender").val()
+    var gender = $("input#gender").val();
     newCandidate = new Candidate(name, age, gender);
-    showdecision1();
+    $("#decision1").show();
   });
   $("button#decision1Button").click(function(){
     newCandidate.policyDec();
+    $("#decision1").hide();
+    $("#decision2").show();
   });
   $("button#decision2Button").click(function(){
     newCandidate.taxesDec();
+    $("#decision2").hide();
+    $("#decision3").show();
+  });
+  $("button#decision3Button").click(function(){
+    newCandidate.attackDec();
+    $("#decision3").hide();
+    $("#outcome").show();
   });
   $("#final-decision-button").submit(function(event) {
 
