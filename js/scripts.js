@@ -7,6 +7,7 @@ function Candidate(firstName, lastName, age, gender) {
   this.gender = gender;
   this.reputation = 0;
   this.funding = 0;
+  this.playerTitle;
 };
 
 Candidate.prototype.fullName = function() {
@@ -32,6 +33,17 @@ var radioInput1 = $("input:radio[name=dec1radio]:checked").val();
   $("#decision2").show()
 };
 
+Candidate.prototype.role = function() {
+  if (this.gender === "male") {
+    this.playerTitle = "Congressman";
+  } else if (this.gender === "female") {
+    this.playerTitle = "Congresswoman";
+  } else {
+    this.playerTitle = "Representative";
+  }
+  return this.playerTitle;
+};
+
 //user interface logic
 $(document).ready(function() {
   var newCandidate;
@@ -43,9 +55,15 @@ $(document).ready(function() {
     var gender = $("input#gender").val()
     newCandidate = new Candidate(firstName, lastName, age, gender);
     var fullName = newCandidate.fullName();
+
+    $(".title").text(newCandidate.role());
+    $(".lastName").text(newCandidate.lastName);
     $("#intro").hide();
+    $("#status").show();
     $("#decision1").show();
-    console.log(newCandidate);
+
+    console.log(newCandidate.role());
+    console.log(newCandidate.lastName);
   });
 
   $("button#decision1Button").click(function(){
