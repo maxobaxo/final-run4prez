@@ -1,49 +1,56 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Cardo|Playfair+Display" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet" type="text/css">
-  <script src="js/jquery-3.2.1.js"></script>
-  <script src="js/scripts.js"></script>
-  <title>Run For President!</title>
-</head>
-<body>
-  <div class="container">
-    <div class="jumbotron">
-      <div class="row">
-        <div class="col-md-3">
-          <img id="prez-seal" src="img/prez-seal.png" alt="presidential seal" />
-        </div>
-        <div class="col-md-9">
-          <h1>Run For President of the United States</h1>
-        </div>
-      </div>
-    </div>
-    <div class="well">
-      <div class="row">
-        <div class="col-md-6">
-          <div id="welcome-blurb">
-            <h2>Anyone can run for president, including you!</h2>
-            <h4>Crazy enough to try?</h4>
-            <h4>Register your campaign by entering your information to the right.</h4>
-            <p>You must be 18 years of age or older to run for the highest office in the land.</p>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Cardo|Playfair+Display" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Run For President!</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <div class="row">
+          <div class="col-md-3">
+            <img id="prez-seal" src="img/prez-seal.png" alt="presidential seal" />
+          </div>
+          <div class="col-md-9">
+            <h1>Run For President of the United States</h1>
           </div>
         </div>
-        <div class="col-md-6">
-          <div id="register">
-            <form id="candidateInfo">
-              <div class="form-group">
-                <input type="text" name="candidateInfo" placeholder=" Name" value="" id="name">
+      </div>
+      <div id="intro">
+        <div class="well">
+          <div class="row">
+            <div class="col-md-6">
+              <div id="welcome-blurb">
+                <h2>Anyone can run for president, including you!</h2>
+                <h4>Crazy enough to try?</h4>
+                <h4>Register your campaign by entering your information to the right.</h4>
+                <p>You must be 18 years of age or older to run for the highest office in the land.</p>
               </div>
-              <div class="form-group">
-                <input type="text" name="candidateInfo" placeholder=" Age" value="" id="age">
+            </div>
+            <div class="col-md-6">
+              <div id="register">
+                <form id="candidateInfo">
+                  <div class="form-group">
+                    <input type="text" name="candidateInfo" placeholder=" First Name" value="" id="first-name">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="candidateInfo" placeholder=" Last Name" value="" id="last-name">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="candidateInfo" placeholder=" Age" value="" id="age">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="candidateInfo" placeholder=" Gender" value="" id="gender">
+                  </div>
+                  <button type="submit" name="candidateInfo" class="btn">Register</button>
+                </form>
               </div>
-              <div class="form-group">
-                <input type="text" name="candidateInfo" placeholder=" Gender" value="" id="gender">
-              </div>
-              <button type="submit" name="candidateInfo" class="btn">Register</button>
-            </form>
+            </div>
           </div>
         </div>
       </div>
@@ -51,37 +58,40 @@
 
     <!-- pair1: focus on initial game setup and UI -->
 
-    <div class="panel panel-default" id="status">
-      <div class="panel-heading">
-      </div>
-      <div class="panel-heading">
-      </div>
-      <div class="panel-body">
-      </div>
-      <div class="panel-footer">
-      </div>
-    </div>
+
 
     <!-- pair2: focus on user decisions -->
     <div class="well decision" id="decision1">
-      <p id="prompt1">
-        You've just finished setting up your national campaign offices and organizing your supporters. You've been approached by a couple of major lobbies looking for candidates to back. Unfortunately, the two are opposed to one another. Do you throw your lot in with the plucky environmentalists or the well-connected industrialists?:
-      </p>
+      <h2>Lobbyists Approach</h2>
+      <h4 id="prompt1">
+        You've just finished setting up your national campaign offices and organizing your supporters. You've been approached by a couple of major lobbies looking for candidates to back. Unfortunately, the two are opposed to one another.</h4>
+        <h4 class="question">Do you throw your lot in with the plucky environmentalists or the well-connected industrialists?:
+      </h4>
       <p class="explanation" id="explanationd1-1">
         <em>Your choice to court the support of the environmentalists has had a good effect on your reputation and a small positive effect on your funds as well.</em>
       </p>
       <p class="explanation" id="explanationd1-2">
         <em>Your choice to court the support of the industrialists has increased your popularity among the working class. Their well-organized interest groups have made a substantial contribution to your funds as well.</em>
       </p>
-      <div class="radio">
-        <label><input type="radio" name="dec1radio" value="environmental">Support Environmentalists</label>
-      </div>
-      <div class="radio">
-        <label><input type="radio" name="dec1radio" value="industrial">Support Industrialists</label>
-      </div>
-      <button type="button" class="btn btn-primary" id="decision1Button">Submit Decision</button>
-      <button type="button" class="btn btn-primary" id="moveon1Button">Next Event</button>
+        <ul class="list-inline">
+          <li>
+            <div class="radio">
+              <label><input type="radio" name="dec1radio" value="environmental">Support Environmentalists</label>
+            </div>
+          </li>
+          <li>
+            <div class="radio">
+              <label><input type="radio" name="dec1radio" value="industrial">Support Industrialists</label>
+            </div>
+          </li>
+          <li>
+            <button type="button" class="btn" id="decision1Button">Submit Decision</button>
+            <button type="button" class="btn btn-primary" id="moveon1Button">Next Event</button>
+          </li>
+        </ul>
+
     </div>
+
       <div class="well decision" id="decision2">
         <p id="prompt2">
           You've been given an opportunity to speak publicly about your campagin policies. The news radio show 'Boring News Tonight with Lou Dobbs' has a full schedule though and only has time for you to speak about your tax policies. How do you use this precious airtime?:
@@ -132,7 +142,6 @@
         <button type="button" class="btn btn-primary" id="decision3Button">Submit Decision</button>
         <button type="button" class="btn btn-primary" id="moveon3Button">Next Event</button>
       </div>
-      </div>
 
       <div id="outcome">
         <div class="well" id="win">
@@ -147,4 +156,4 @@
 
 
     </body>
-    </html>
+  </html>
