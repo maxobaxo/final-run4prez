@@ -27,7 +27,9 @@ var radioInput1 = $("input:radio[name=dec1radio]:checked").val();
   $("#decision1").hide()
   $("#decision2").show()
 };
-
+Candidate.prototype.donorDec = function(){
+  
+};
 //user interface logic
 $(document).ready(function() {
   var newCandidate;
