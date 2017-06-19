@@ -26,14 +26,17 @@ var radioInput2 = $("input:radio[name=dec2radio]:checked").val();
     this.reputation = this.reputation + 5;
     this.funding = this.funding + 1000;
     console.log(this)
+    showExplanationd21();
   } else if (radioInput2 == "paytax") {
     this.reputation = this.reputation + 7;
     this.funding = this.funding - 250;
     console.log(this)
+    showExplanationd22();
   } else if (radioInput2 == "avoidquestion") {
     this.reputation = this.reputation + 1;
     this.funding = this.funding + 500;
     console.log(this)
+    showExplanationd23();
   };
 };
 Candidate.prototype.attackDec = function(){
@@ -75,6 +78,15 @@ $(document).ready(function() {
   showExplanationd12 = function() {
     $("#explanationd1-2").show()
   };
+  showExplanationd21 = function() {
+    $("#explanationd2-1").show()
+  };
+  showExplanationd22 = function() {
+    $("#explanationd2-2").show()
+  };
+  showExplanationd23 = function() {
+    $("#explanationd2-3").show()
+  };
   $("#register").submit(function(event) {
     event.preventDefault();
 
@@ -95,6 +107,10 @@ $(document).ready(function() {
   });
   $("button#decision2Button").click(function(){
     newCandidate.taxesDec();
+    $("button#decision2Button").hide();
+    $("button#moveon2Button").show();
+  });
+  $("button#moveon2Button").click(function(){
     $("#decision2").hide();
     $("#decision3").show();
   });
