@@ -2,6 +2,7 @@
 <html>
   <head>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Cardo|Playfair+Display" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/scripts.js"></script>
@@ -10,7 +11,14 @@
   <body>
     <div class="container">
       <div class="jumbotron">
-        <h1>Run For President of the United States</h1>
+        <div class="row">
+          <div class="col-md-3">
+            <img id="prez-seal" src="img/prez-seal.png" alt="presidential seal" />
+          </div>
+          <div class="col-md-9">
+            <h1>Run For President of the United States</h1>
+          </div>
+        </div>
       </div>
       <div class="well">
         <div class="row">
@@ -19,6 +27,7 @@
               <h4>Anyone can run for president, including you!</h4>
               <p>Crazy enough to try?</p>
               <p>Register your campaign by entering your information to the right.</p>
+              <p>You must be 18 years of age or older to run for the highest office in the land.</p>
             </div>
           </div>
           <div class="col-md-6">
@@ -33,6 +42,7 @@
                 <div class="form-group">
                   <input type="text" name="candidateInfo" placeholder=" Gender" value="" id="gender">
                 </div>
+                <button type="submit" name="candidateInfo" class="btn btn-info">Register</button>
               </form>
             </div>
           </div>
@@ -53,13 +63,13 @@
       </div>
 
 <!-- pair2: focus on user decisions -->
-      <div class="well" id="decision1">
+      <div class="well decision" id="decision1">
 
       </div>
-      <div class="well" id="decision2">
+      <div class="well decision" id="decision2">
 
       </div>
-      <div class="well" id="decision3">
+      <div class="well decision" id="decision3">
 
       </div>
 
