@@ -30,20 +30,17 @@ var radioInput1 = $("input:radio[name=dec1radio]:checked").val();
 
 //user interface logic
 $(document).ready(function() {
-  var name; age; gender;
-  var radioInput1;
-  var newCandidate = new Candidate(name, age, gender);
-  $("button#decision1Button").click(function(){
-    newCandidate.policyDec();
-  });
+  var newCandidate;
   $("#register").submit(function(event) {
     event.preventDefault();
     var name = $("input#name").val();
     var age = $("input#age").val();
     var gender = $("input#gender").val()
-    var newCandidate = new Candidate(name, age, gender);
+    newCandidate = new Candidate(name, age, gender);
     showdecision1();
-
+  });
+  $("button#decision1Button").click(function(){
+    newCandidate.policyDec();
   });
 
   $("#final-decision-button").submit(function(event) {
