@@ -1,68 +1,68 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Cardo|Playfair+Display" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-3.2.1.js"></script>
-    <script src="js/scripts.js"></script>
-    <title>Run For President!</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="jumbotron">
-        <div class="row">
-          <div class="col-md-3">
-            <img id="prez-seal" src="img/prez-seal.png" alt="presidential seal" />
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Cardo|Playfair+Display" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.2.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Run For President!</title>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col-md-3">
+          <img id="prez-seal" src="img/prez-seal.png" alt="presidential seal" />
+        </div>
+        <div class="col-md-9">
+          <h1>Run For President of the United States</h1>
+        </div>
+      </div>
+    </div>
+    <div class="well">
+      <div class="row">
+        <div class="col-md-6">
+          <div id="welcome-blurb">
+            <h2>Anyone can run for president, including you!</h2>
+            <h4>Crazy enough to try?</h4>
+            <h4>Register your campaign by entering your information to the right.</h4>
+            <p>You must be 18 years of age or older to run for the highest office in the land.</p>
           </div>
-          <div class="col-md-9">
-            <h1>Run For President of the United States</h1>
+        </div>
+        <div class="col-md-6">
+          <div id="register">
+            <form id="candidateInfo">
+              <div class="form-group">
+                <input type="text" name="candidateInfo" placeholder=" Name" value="" id="name">
+              </div>
+              <div class="form-group">
+                <input type="text" name="candidateInfo" placeholder=" Age" value="" id="age">
+              </div>
+              <div class="form-group">
+                <input type="text" name="candidateInfo" placeholder=" Gender" value="" id="gender">
+              </div>
+              <button type="submit" name="candidateInfo" class="btn">Register</button>
+            </form>
           </div>
         </div>
       </div>
-      <div class="well">
-        <div class="row">
-          <div class="col-md-6">
-            <div id="welcome-blurb">
-              <h2>Anyone can run for president, including you!</h2>
-              <h4>Crazy enough to try?</h4>
-              <h4>Register your campaign by entering your information to the right.</h4>
-              <p>You must be 18 years of age or older to run for the highest office in the land.</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div id="register">
-              <form id="candidateInfo">
-                <div class="form-group">
-                  <input type="text" name="candidateInfo" placeholder=" Name" value="" id="name">
-                </div>
-                <div class="form-group">
-                  <input type="text" name="candidateInfo" placeholder=" Age" value="" id="age">
-                </div>
-                <div class="form-group">
-                  <input type="text" name="candidateInfo" placeholder=" Gender" value="" id="gender">
-                </div>
-                <button type="submit" name="candidateInfo" class="btn">Register</button>
-              </form>
-            </div>
-          </div>
-        </div>
+    </div>
+
+    <!-- pair1: focus on initial game setup and UI -->
+
+    <div class="panel panel-default" id="status">
+      <div class="panel-heading">
       </div>
-
-<!-- pair1: focus on initial game setup and UI -->
-
-      <div class="panel panel-default" id="status">
-        <div class="panel-heading">
-        </div>
-        <div class="panel-heading">
-        </div>
-        <div class="panel-body">
-        </div>
-        <div class="panel-footer">
-        </div>
+      <div class="panel-heading">
       </div>
+      <div class="panel-body">
+      </div>
+      <div class="panel-footer">
+      </div>
+    </div>
 
-<!-- pair2: focus on user decisions -->
+    <!-- pair2: focus on user decisions -->
     <div class="well decision" id="decision1">
       <p id="prompt1">
         You've just finished setting up your national campaign offices and organizing your supporters. You've been approached by a couple of major lobbies looking for candidates to back. Unfortunately, the two are opposed to one another. Do you throw your lot in with the plucky environmentalists or the well-connected industrialists?:
@@ -72,34 +72,39 @@
       </div>
       <div class="radio">
         <label><input type="radio" name="dec1radio" value="industrial">Support Industrialists</label>
+      </div>
       <button type="button" class="btn btn-primary" id="decision1Button">Submit Decision</button>
     </div>
-    <div class="well decision" id="decision2">
-      <p id="prompt2">
-        You've been given an opportunity to speak publicly about your campagin policies. The news radio show 'Boring News Tonight with Terry Gross' has a full schedule though
-      </p>
-      <div class="radio">
-        <label><input type="radio" name="dec2radio" value="environmental">Support Environmentalists</label>
+      <div class="well decision" id="decision2">
+        <p id="prompt2">
+          You've been given an opportunity to speak publicly about your campagin policies. The news radio show 'Boring News Tonight with Lou Dobbs' has a full schedule though and only has time for you to speak about your tax policies. How do you use this precious airtime?:
+        </p>
+        <div class="radio">
+          <label><input type="radio" name="dec2radio" value="cuttax">Publicly declare that you will cut taxes for <strong>everyone.</strong></label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="dec2radio" value="paytax">Publicly declare that the wealthy will begin to pay a greater share of taxes according to their means.</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="dec2radio" value="avoidquestion">State that nothing is wrong with tax policy and that the <em>real</em> problem is government spending.</label>
+        </div>
+        <button type="button" class="btn btn-primary" id="decision2Button">Submit Decision</button>
       </div>
-      <div class="radio">
-        <label><input type="radio" name="dec2radio" value="industrial">Support Industrialists</label>
-      <button type="button" class="btn btn-primary" id="decision2Button">Submit Decision</button>
-    </div>
-    <div class="well decision" id="decision3">
+      <div class="well decision" id="decision3">
 
-    </div>
-    </div>
-    <div id="outcome">
-      <div class="well" id="win">
-        <h2>Congratulations!</h2>
-        <h4>The votes are in, and I am pleased to announce that you have won the election!!   You are now President-Elect <span class="last-name"></span>. Soon, you will receive a call from your competitor to concede. It's time for your victory speech, but don't forget to thank your supporters... You didn't get here on your own.</h4>
       </div>
-      <div class="well" id="lose">
-        <h2>Sorry to say...</h2>
-        <h4>You have lost the election. Along the way, you made some poor decisions, and now you must suffer the consequences. Make that dreaded call to your competitor, and go out there and give 'em the best concession speech they've ever heard!</h4>
+
+      <div id="outcome">
+        <div class="well" id="win">
+          <h2>Congratulations!</h2>
+          <h4>The votes are in, and I am pleased to announce that you have won the election!!   You are now President-Elect <span class="last-name"></span>. Soon, you will receive a call from your competitor to concede. It's time for your victory speech, but don't forget to thank your supporters... You didn't get here on your own.</h4>
+        </div>
+        <div class="well" id="lose">
+          <h2>Sorry to say...</h2>
+          <h4>You have lost the election. Along the way, you made some poor decisions, and now you must suffer the consequences. Make that dreaded call to your competitor, and go out there and give 'em the best concession speech they've ever heard!</h4>
+        </div>
       </div>
-    </div>
 
 
-</body>
-</html>
+    </body>
+    </html>

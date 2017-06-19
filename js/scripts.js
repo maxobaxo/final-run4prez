@@ -21,15 +21,31 @@ var radioInput1 = $("input:radio[name=dec1radio]:checked").val();
     this.funding = this.funding + 1000;
     console.log("industry trigger")
     console.log(this)
-  } else {
-    console.log("conditions have failed")
-  }
+  };
   $("#decision1").hide()
   $("#decision2").show()
 };
-Candidate.prototype.donorDec = function(){
-  
+Candidate.prototype.taxesDec = function(){
+var radioInput2 = $("input:radio[name=dec2radio]:checked").val();
+  if (radioInput2 == "cuttax") {
+    this.reputation = this.reputation + 5;
+    this.funding = this.funding + 1000;
+    console.log(this)
+  } else if (radioInput2 == "paytax") {
+    this.reputation = this.reputation + 7;
+    this.funding = this.funding - 250;
+    console.log(this)
+  } else if (radioInput2 == "avoidquestion") {
+    this.reputation = this.reputation + 1;
+    this.funding = this.funding + 500;
+    console.log(this)
+  };
+  $("#decision2").hide()
+  $("#decision3").show()
 };
+
+
+
 //user interface logic
 $(document).ready(function() {
   var newCandidate;
@@ -44,7 +60,9 @@ $(document).ready(function() {
   $("button#decision1Button").click(function(){
     newCandidate.policyDec();
   });
-
+  $("button#decision2Button").click(function(){
+    newCandidate.taxesDec();
+  });
   $("#final-decision-button").submit(function(event) {
 
   });
