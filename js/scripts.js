@@ -45,13 +45,16 @@ var radioInput3 = $("input:radio[name=dec3radio]:checked").val();
     this.reputation = this.reputation + 0;
     this.funding = this.funding - 500;
     console.log(this)
+    showExplanationd31();
   } else if (radioInput3 == "giveup") {
     this.reputation = this.reputation - 3;
     console.log(this)
+    showExplanationd32();
   } else if (radioInput3 == "defend") {
     this.reputation = this.reputation + 3;
     this.funding = this.funding - 500;
     console.log(this)
+    showExplanationd33();
   };
 };
 Candidate.prototype.winLose = function() {
@@ -87,6 +90,15 @@ $(document).ready(function() {
   showExplanationd23 = function() {
     $("#explanationd2-3").show()
   };
+  showExplanationd31 = function() {
+    $("#explanationd3-1").show()
+  };
+  showExplanationd32 = function() {
+    $("#explanationd3-2").show()
+  };
+  showExplanationd33 = function() {
+    $("#explanationd3-3").show()
+  };
   $("#register").submit(function(event) {
     event.preventDefault();
 
@@ -116,6 +128,10 @@ $(document).ready(function() {
   });
   $("button#decision3Button").click(function(){
     newCandidate.attackDec();
+    $("button#decision3Button").hide();
+    $("button#moveon3Button").show();
+  });
+  $("button#moveon3Button").click(function(){
     $("#decision3").hide();
     newCandidate.winLose();
   });
