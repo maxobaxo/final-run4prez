@@ -59,11 +59,12 @@ $(document).ready(function() {
     $(".title").text(newCandidate.role());
     $(".lastName").text(newCandidate.lastName);
     $("#intro").hide();
+    $(".reputation-points").append(newCandidate.reputation);
+    $(".funds").append(newCandidate.funding);
     $("#status").show();
     $("#decision1").show();
 
-    console.log(newCandidate.role());
-    console.log(newCandidate.lastName);
+    console.log(newCandidate.reputation);
   });
 
   $("button#decision1Button").click(function(){

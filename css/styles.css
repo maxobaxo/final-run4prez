@@ -22,6 +22,7 @@ button {
 
 #status {
   display: none;
+  color: black;
 }
 
 .decision {
