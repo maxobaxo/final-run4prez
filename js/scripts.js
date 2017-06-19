@@ -14,7 +14,7 @@ $(document).ready(function() {
 
     var name = $("input#name").val();
     var age = $("input#age").val();
-    var gender = $("input#gender").val();
+    var gender = $("input#gender").val()
 
     var newCandidate = new Candidate(name, age, gender);
   });
