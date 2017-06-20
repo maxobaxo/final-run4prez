@@ -20,17 +20,29 @@ button {
   color: white;
 }
 
+.blockButton {
+  display: block;
+  margin: auto;
+}
+
+#moveon1Button {
+  display: none;
+}
+
+#moveon2Button {
+  display: none;
+}
+
+#moveon3Button {
+  display: none;
+}
+
 #status {
   display: none;
   color: black;
   border: none;
   margin-top: 1.5%;
 }
-
-.flag-image {
-  max-width: 100%;
-}
-
 
 #status .panel-heading, #status .panel-footer {
   background-color: #AE083B;
@@ -55,6 +67,11 @@ button {
 #image-center {
   display: block;
   margin: auto;
+  max-width: 100%;
+}
+
+.img-column {
+  border: 1px solid black;
 }
 
 .decision {
@@ -73,23 +90,16 @@ button {
   text-align: center;
   margin-top: 0;
 }
+
 #win {
   display: none;
 }
+
 #lose {
   display: none;
 }
+
 .explanation {
   display: none;
   font-size: 20px;
-}
-
-#moveon1Button {
-  display: none;
-}
-#moveon2Button {
-  display: none;
-}
-#moveon3Button {
-  display: none;
 }
