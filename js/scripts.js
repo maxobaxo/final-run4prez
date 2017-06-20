@@ -61,6 +61,57 @@ Candidate.prototype.choiceThree = function(radioInput3){
   }
 };
 
+
+Candidate.prototype.choiceFive = function(radioInput5){
+  if (radioInput5 == "Decline") {
+    this.reputation = this.reputation + 2;
+    console.log(this);
+    return "5A";
+  } else if (radioInput5 == "Cyber") {
+    this.reputation = this.reputation + 5;
+    this.funding = this.funding + 1000;
+    console.log(this);
+    return "5B";
+  } else if (radioInput5 == "Nakedtruth") {
+    this.reputation = this.reputation + 7;
+    console.log(this);
+    return "5C";
+  }
+};
+
+
+Candidate.prototype.choiceSeven = function(radioInput7){
+  if (radioInput7 == "Force") {
+    this.reputation = this.reputation + 3;
+    this.funding = this.funding + 750;
+    console.log(this);
+    return "7A";
+  } else if (radioInput7 == "Accuse") {
+    this.reputation = this.reputation - 5;
+    this.funding = this.funding + 100;
+    console.log(this);
+    return "7B";
+  } else if (radioInput7 == "Maury") {
+    this.reputation = this.reputation + 10;
+    this.funding = this.funding - 500;
+    console.log(this);
+    return "7C";
+  }
+};
+
+Candidate.prototype.choiceNine = function(radioInput9){
+  if (radioInput9 == "public") {
+    this.reputation = this.reputation + 7;
+    this.funding = this.funding + 1000;
+    console.log(this);
+    return "9A";
+  } else if (radioInput9 == "private") {
+    this.reputation = this.reputation + 1;
+    this.funding = this.funding + 1000;
+    console.log(this);
+    return "9B";
+  }
+};
 Candidate.prototype.winLose = function() {
   if (this.reputation >= 9) {
     victoryReveal();
@@ -90,15 +141,6 @@ $(document).ready(function() {
     $("#lose").show();
   };
 
-  showExplanationd31 = function() {
-    $("#explanationd3-1").show()
-  };
-  showExplanationd32 = function() {
-    $("#explanationd3-2").show()
-  };
-  showExplanationd33 = function() {
-    $("#explanationd3-3").show()
-  };
 
   var turns = 0;
   nextDecision = function() {
@@ -226,8 +268,17 @@ $(document).ready(function() {
     $("#decision4").hide();
   });
   $("button#decision5Button").click(function(){
-    newCandidate.choiceFive();
+    var radioInput5 = $("input:radio[name=dec5radio]:checked").val();
+    var choiceFive = newCandidate.choiceFive(radioInput5);
+    $("#explanation" + choiceFive).show();
+
     $("button#decision5Button").hide();
+    $("#prompt5").hide();
+    $("#question5").hide();
+    $(".reputation-points").empty();
+    $(".reputation-points").append(newCandidate.reputation);
+    $(".funds").empty();
+    $(".funds").append(newCandidate.funding);
     $("button#moveon5Button").show();
   });
   $("button#moveon5Button").click(function(){
@@ -244,8 +295,17 @@ $(document).ready(function() {
     $("#decision6").hide();
   });
   $("button#decision7Button").click(function(){
-    newCandidate.choiceSeven();
+    var radioInput7 = $("input:radio[name=dec7radio]:checked").val();
+    var choiceSeven = newCandidate.choiceSeven(radioInput7);
+    $("#explanation" + choiceSeven).show();
+
     $("button#decision7Button").hide();
+    $("#prompt7").hide();
+    $("#question7").hide();
+    $(".reputation-points").empty();
+    $(".reputation-points").append(newCandidate.reputation);
+    $(".funds").empty();
+    $(".funds").append(newCandidate.funding);
     $("button#moveon7Button").show();
   });
   $("button#moveon7Button").click(function(){
@@ -262,8 +322,17 @@ $(document).ready(function() {
     $("#decision8").hide();
   });
   $("button#decision9Button").click(function(){
-    newCandidate.choiceNine();
+    var radioInput9 = $("input:radio[name=dec9radio]:checked").val();
+    var choiceNine = newCandidate.choiceNine(radioInput9);
+    $("#explanation" + choiceNine).show();
+
     $("button#decision9Button").hide();
+    $("#prompt9").hide();
+    $("#question9").hide();
+    $(".reputation-points").empty();
+    $(".reputation-points").append(newCandidate.reputation);
+    $(".funds").empty();
+    $(".funds").append(newCandidate.funding);
     $("button#moveon9Button").show();
   });
   $("button#moveon9Button").click(function(){
