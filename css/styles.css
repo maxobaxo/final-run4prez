@@ -50,20 +50,27 @@ button {
   font-family: 'Playfair Display', serif;
   font-family: 'Cardo', serif;
   text-align: center;
+  max-width: auto;
 }
 
 .scoreBox {
-  margin: auto;
-  max-width: 90%;
+  /*display: block;*/
   text-align: center;
-  border: 1px solid black;
+  padding-top: 25%;
+  /*border: 1px solid black;*/
+}
+
+#repScore {
+  margin-left: 6%;
+}
+
+#fundScore {
+  margin-right: 6%;
 }
 
 .scoreNumber {
   text-align: center;
-  font-size: 5vw;
-  contain: paint;
-
+  font-size: 75px;
 }
 
 #image-center {
@@ -73,7 +80,11 @@ button {
 }
 
 .img-column {
-  border: 1px solid black;
+  /*border: 1px solid black;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden
 }
 
 .decision {
