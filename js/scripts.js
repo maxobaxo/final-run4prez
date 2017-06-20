@@ -263,7 +263,7 @@ $(document).ready(function() {
     nextDecision();
     $("#decision10").hide();
   });
-  $("#finalDecisionButton").submit(function(event) {
+  $("#finalDecisionButton").click(function() {
     newCandidate.winLose();
     $("#finalDecision").hide();
   });
