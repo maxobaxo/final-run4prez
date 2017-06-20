@@ -60,8 +60,10 @@ button {
 }
 
 .scoreNumber {
-  font-size: 100px;
   text-align: center;
+  font-size: 5vw;
+  contain: paint;
+
 }
 
 #image-center {
