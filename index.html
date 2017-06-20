@@ -26,10 +26,11 @@
           <div class="row">
             <div class="col-md-6">
               <div id="welcome-blurb">
-                <h2>Anyone can run for president, including you!</h2>
+                <h2>Anyone can run for President, including you!</h2>
                 <h4>Crazy enough to try?</h4>
-                <h4>Register your campaign by entering your information to the right.</h4>
-                <p>You must be 18 years of age or older to run for the highest office in the land.</p>
+                <br>
+                <h4>Register your campaign by entering your information:</h4>
+                <p>(You must be 18 years of age or older to run for the highest office in the land.)</p>
               </div>
             </div>
             <div class="col-md-6">
@@ -54,25 +55,14 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- pair1: focus on initial game setup and UI -->
+      <div class="well decision" id="decision1">
+        <h2>Lobbyists Approach</h2>
+        <h4 id="prompt1">You've just finished setting up your national campaign offices and organizing your supporters. You've been approached by a couple of major lobbies looking for candidates to back. Unfortunately, the two are opposed to one another.</h4>
+        <h4 class="question" id="question1">Do you throw your lot in with the plucky environmentalists or the well-connected industrialists?</h4>
 
-
-
-    <!-- pair2: focus on user decisions -->
-    <div class="well decision" id="decision1">
-      <h2>Lobbyists Approach</h2>
-      <h4 id="prompt1">
-        You've just finished setting up your national campaign offices and organizing your supporters. You've been approached by a couple of major lobbies looking for candidates to back. Unfortunately, the two are opposed to one another.</h4>
-        <h4 class="question">Do you throw your lot in with the plucky environmentalists or the well-connected industrialists?:
-      </h4>
-      <p class="explanation" id="explanationd1-1">
-        <em>Your choice to court the support of the environmentalists has had a good effect on your reputation and a small positive effect on your funds as well.</em>
-      </p>
-      <p class="explanation" id="explanationd1-2">
-        <em>Your choice to court the support of the industrialists has increased your popularity among the working class. Their well-organized interest groups have made a substantial contribution to your funds as well.</em>
-      </p>
+        <p class="explanation" id="explanationd1-1"><em>Your choice to court the support of the environmentalists has had a good effect on your reputation and a small positive effect on your funds as well.</em></p>
+        <p class="explanation" id="explanationd1-2"><em>Your choice to court the support of the industrialists has increased your popularity among the working class. Their well-organized interest groups have made a substantial contribution to your funds as well.</em></p>
         <ul class="list-inline">
           <li>
             <div class="radio">
@@ -85,299 +75,345 @@
             </div>
           </li>
           <li>
-            <button type="button" class="btn" id="decision1Button">Submit Decision</button>
-            <button type="button" class="btn btn-primary" id="moveon1Button">Next Event</button>
+            <button type="button" class="btn btn-block" id="decision1Button">Submit Decision</button>
+            <button type="button" class="btn" id="moveon1Button">Next Event</button>
           </li>
         </ul>
-
-    </div>
+      </div>
 
       <div class="well decision" id="decision2">
-        <p id="prompt2">
-          You've been given an opportunity to speak publicly about your campagin policies. The news radio show 'Boring News Tonight with Lou Dobbs' has a full schedule though and only has time for you to speak about your tax policies. How do you use this precious airtime?:
-        </p>
-        <p class="explanation" id="explanationd2-1">
-          <em>Your decision to cut taxes across the board has increased your reputation because deep down, nobody wants to pay taxes. Your funding has increased because this statement attracted more financial backers.</em>
-        </p>
-        <p class="explanation" id="explanationd2-2">
-          <em>You declaration has caused the middle and lower classes to flock to your banner, giving you a significant increase in reputation. However, it has cost you financially because some of your more wealthy supporters have jumped ship.</em>
-        </p>
-        <p class="explanation" id="explanationd2-3">
-          <em>Your railing against government spending, while not directly answering the question, has bought some support from business interests that are passionate about the issue.</em>
-        </p>
-        <div class="radio">
-          <label><input type="radio" name="dec2radio" value="cuttax">Publicly declare that you will cut taxes for <strong>everyone.</strong></label>
-        </div>
-        <div class="radio">
-          <label><input type="radio" name="dec2radio" value="paytax">Publicly declare that the wealthy will begin to pay a greater share of taxes according to their means.</label>
-        </div>
-        <div class="radio">
-          <label><input type="radio" name="dec2radio" value="avoidquestion">State that nothing is wrong with tax policy and that the <em>real</em> problem is government spending.</label>
-        </div>
-        <button type="button" class="btn btn-primary" id="decision2Button">Submit Decision</button>
-        <button type="button" class="btn btn-primary" id="moveon2Button">Next Event</button>
-      </div>
-      <div class="well decision" id="decision3">
-        <p id="prompt3">
-          The general election is rapidly approaching and you've begun to feel the pressure. Unfortunately your opposition has begun to run attack ads criticizing the handwriting you demonstrated in your third grade cursive class. How do you respond to this egregious slight?:
-        </p>
-        <p class="explanation" id="explanationd3-1">
-          <em>Your attack ads successfully drew attention away from your opponent's slights, but the ad campaign cost your war-chest substantially.</em>
-        </p>
-        <p class="explanation" id="explanationd3-2">
-          <em>Your decision to take the high road is ethically commendable, but it did nothing to combat the negative press.</em>
-        </p>
-        <p class="explanation" id="explanationd3-3">
-          <em>You've decided to publicly shame your oponent's tactics, casting yourself as more honest than the opposition. In this effort you were successful. However, The advertising push was a substantial drain on funding.</em>
-        </p>
-        <div class="radio">
-          <label><input type="radio" name="dec3radio" value="attack">Meet your opponent on their level and release attack ads targetting their poor hygeine.</label>
-        </div>
-        <div class="radio">
-          <label><input type="radio" name="dec3radio" value="giveup">Decide that it's more honporable to do the right thing and simply not respond to such slander.</label>
-        </div>
-        <div class="radio">
-          <label><input type="radio" name="dec3radio" value="defend">Run an ad series targetting your opponent for running attack ads, painting yourself as taking the high road.</label>
-        </div>
-        <button type="button" class="btn btn-primary" id="decision3Button">Submit Decision</button>
-        <button type="button" class="btn btn-primary" id="moveon3Button">Next Event</button>
+        <h2>Policies Shmolicies</h2>
+        <h4 id="prompt2">You've been given an opportunity to speak publicly about your campaign policies. The news radio show 'Boring News Tonight with Lou Dobbs' has a full schedule though and only has time for you to speak about your tax policies.</h4>
+        <h4 class="question" id="question2">How do you use this precious airtime?</h4>
+
+        <p class="explanation" id="explanationd2-1"><em>Your decision to cut taxes across the board has increased your reputation because deep down, nobody wants to pay taxes. Your funding has increased because this statement attracted more financial backers.</em></p>
+        <p class="explanation" id="explanationd2-2"><em>You declaration has caused the middle and lower classes to flock to your banner, giving you a significant increase in reputation. However, it has cost you financially because some of your more wealthy supporters have jumped ship.</em></p>
+        <p class="explanation" id="explanationd2-3"><em>Your railing against government spending, while not directly answering the question, has bought some support from business interests that are passionate about the issue.</em></p>
+        <ul class="list-unstyled">
+          <li>
+            <div class="radio">
+              <label><input type="radio" name="dec2radio" value="cuttax">Publicly declare that you will cut taxes for <strong>everyone.</strong></label>
+            </div>
+          </li>
+          <li>
+            <div class="radio">
+              <label><input type="radio" name="dec2radio" value="paytax">Publicly declare that the wealthy will begin to pay a greater share of taxes according to their means.</label>
+            </div>
+          </li>
+          <li>
+            <div class="radio">
+              <label><input type="radio" name="dec2radio" value="avoidquestion">State that nothing is wrong with tax policy and that the <em>real</em> problem is government spending.</label>
+            </div>
+          </li>
+          <li>
+            <button type="button" class="btn blockButton" id="decision2Button">Submit Decision</button>
+            <button type="button" class="btn" id="moveon2Button">Next Event</button>
+          </li>
+        </ul>
       </div>
 
+      <div class="well decision" id="decision3">
+        <h2>Curse Your Cursive!</h2>
+        <h4 id="prompt3">The general election is rapidly approaching and you've begun to feel the pressure. Unfortunately your opposition has begun to run attack ads criticizing the handwriting you demonstrated in your third grade cursive class.</h4>
+        <h4 class="question" id="question3">How do you respond to this egregious slight?:</h4>
+
+        <p class="explanation" id="explanationd3-1"><em>Your attack ads successfully drew attention away from your opponent's slights, but the ad campaign cost your war-chest substantially.</em></p>
+        <p class="explanation" id="explanationd3-2"><em>Your decision to take the high road is ethically commendable, but it did nothing to combat the negative press.</em></p>
+        <p class="explanation" id="explanationd3-3"><em>You've decided to publicly shame your oponent's tactics, casting yourself as more honest than the opposition. In this effort you were successful. However, The advertising push was a substantial drain on funding.</em></p>
+        <ul class="list-unstyled">
+          <li>
+            <div class="radio">
+              <label><input type="radio" name="dec3radio" value="attack">Meet your opponent on their level and release attack ads targetting their poor hygeine.</label>
+            </div>
+          </li>
+          <li>
+            <div class="radio">
+              <label><input type="radio" name="dec3radio" value="giveup">Decide that it's more honporable to do the right thing and simply not respond to such slander.</label>
+            </div>
+          </li>
+          <li>
+            <div class="radio">
+              <label><input type="radio" name="dec3radio" value="defend">Run an ad series targetting your opponent for running attack ads, painting yourself as taking the high road.</label>
+            </div>
+          </li>
+          <li>
+            <button type="button" class="btn blockButton" id="decision3Button">Submit Decision</button>
+            <button type="button" class="btn" id="moveon3Button">Next Event</button>
+          </li>
+        </ul>
+      </div>
       <!-- DUMMY PROMPTS BEGIN HERE!-->
       <div class="well decision" id="decision4">
         <h2></h2>
         <h4 id="prompt4">DUMMY PROMPT!4</h4>
-          <h4 class="question"></h4>
+        <h4 class="question"></h4>
         <p class="explanation" id="explanationd4-1">
           <em></em>
         </p>
         <p class="explanation" id="explanationd4-2">
           <em></em>
         </p>
-          <ul class="list-inline">
-            <li>
-              <div class="radio">
-                <label><input type="radio" name="dec4radio" value=""></label>
-              </div>
-            </li>
-            <li>
-              <div class="radio">
-                <label><input type="radio" name="dec4radio" value=""></label>
-              </div>
-            </li>
-            <li>
-              <button type="button" class="btn" id="decision4Button">Submit Decision</button>
-              <button type="button" class="btn btn-primary" id="moveon4Button">Next Event</button>
-            </li>
-          </ul>
+        <ul class="list-inline">
+          <li>
+            <div class="radio">
+              <label><input type="radio" name="dec4radio" value=""></label>
+            </div>
+          </li>
+          <li>
+            <div class="radio">
+              <label><input type="radio" name="dec4radio" value=""></label>
+            </div>
+          </li>
+          <li>
+            <button type="button" class="btn" id="decision4Button">Submit Decision</button>
+            <button type="button" class="btn btn-primary" id="moveon4Button">Next Event</button>
+          </li>
+        </ul>
 
       </div>
       <div class="well decision" id="decision5">
         <h2></h2>
         <h4 id="prompt5">DUMMY PROMPT!5</h4>
-          <h4 class="question"></h4>
+        <h4 class="question"></h4>
         <p class="explanation" id="explanationd5-1">
           <em></em>
         </p>
         <p class="explanation" id="explanationd5-2">
           <em></em>
         </p>
-          <ul class="list-inline">
-            <li>
-              <div class="radio">
-                <label><input type="radio" name="dec5radio" value=""></label>
-              </div>
-            </li>
-            <li>
-              <div class="radio">
-                <label><input type="radio" name="dec5radio" value=""></label>
-              </div>
-            </li>
-            <li>
-              <button type="button" class="btn" id="decision5Button">Submit Decision</button>
-              <button type="button" class="btn btn-primary" id="moveon5Button">Next Event</button>
-            </li>
-          </ul>
+        <ul class="list-inline">
+          <li>
+            <div class="radio">
+              <label><input type="radio" name="dec5radio" value=""></label>
+            </div>
+          </li>
+          <li>
+            <div class="radio">
+              <label><input type="radio" name="dec5radio" value=""></label>
+            </div>
+          </li>
+          <li>
+            <button type="button" class="btn" id="decision5Button">Submit Decision</button>
+            <button type="button" class="btn btn-primary" id="moveon5Button">Next Event</button>
+          </li>
+        </ul>
 
       </div>
       <div class="well decision" id="decision6">
         <h2></h2>
         <h4 id="prompt6">DUMMY PROMPT!6</h4>
-          <h4 class="question"></h4>
+        <h4 class="question"></h4>
         <p class="explanation" id="explanationd6-1">
           <em></em>
         </p>
         <p class="explanation" id="explanationd6-2">
           <em></em>
         </p>
-          <ul class="list-inline">
-            <li>
-              <div class="radio">
-                <label><input type="radio" name="dec6radio" value=""></label>
-              </div>
-            </li>
-            <li>
-              <div class="radio">
-                <label><input type="radio" name="dec6radio" value=""></label>
-              </div>
-            </li>
-            <li>
-              <button type="button" class="btn" id="decision6Button">Submit Decision</button>
-              <button type="button" class="btn btn-primary" id="moveon6Button">Next Event</button>
-            </li>
-          </ul>
+        <ul class="list-inline">
+          <li>
+            <div class="radio">
+              <label><input type="radio" name="dec6radio" value=""></label>
+            </div>
+          </li>
+          <li>
+            <div class="radio">
+              <label><input type="radio" name="dec6radio" value=""></label>
+            </div>
+          </li>
+          <li>
+            <button type="button" class="btn" id="decision6Button">Submit Decision</button>
+            <button type="button" class="btn btn-primary" id="moveon6Button">Next Event</button>
+          </li>
+        </ul>
 
       </div>
       <div class="well decision" id="decision7">
         <h2></h2>
         <h4 id="prompt7">DUMMY PROMPT!7</h4>
-          <h4 class="question"></h4>
+        <h4 class="question"></h4>
         <p class="explanation" id="explanationd7-1">
           <em></em>
         </p>
         <p class="explanation" id="explanationd7-2">
           <em></em>
         </p>
-          <ul class="list-inline">
-            <li>
-              <div class="radio">
-                <label><input type="radio" name="dec7radio" value=""></label>
-              </div>
-            </li>
-            <li>
-              <div class="radio">
-                <label><input type="radio" name="dec7radio" value=""></label>
-              </div>
-            </li>
-            <li>
-              <button type="button" class="btn" id="decision7Button">Submit Decision</button>
-              <button type="button" class="btn btn-primary" id="moveon7Button">Next Event</button>
-            </li>
-          </ul>
+        <ul class="list-inline">
+          <li>
+            <div class="radio">
+              <label><input type="radio" name="dec7radio" value=""></label>
+            </div>
+          </li>
+          <li>
+            <div class="radio">
+              <label><input type="radio" name="dec7radio" value=""></label>
+            </div>
+          </li>
+          <li>
+            <button type="button" class="btn" id="decision7Button">Submit Decision</button>
+            <button type="button" class="btn btn-primary" id="moveon7Button">Next Event</button>
+          </li>
+        </ul>
 
       </div>
       <div class="well decision" id="decision8">
         <h2></h2>
         <h4 id="prompt8">DUMMY PROMPT!8</h4>
-          <h4 class="question"></h4>
+        <h4 class="question"></h4>
         <p class="explanation" id="explanationd8-1">
           <em></em>
         </p>
         <p class="explanation" id="explanationd8-2">
           <em></em>
         </p>
-          <ul class="list-inline">
-            <li>
-              <div class="radio">
-                <label><input type="radio" name="dec8radio" value=""></label>
-              </div>
-            </li>
-            <li>
-              <div class="radio">
-                <label><input type="radio" name="dec8radio" value=""></label>
-              </div>
-            </li>
-            <li>
-              <button type="button" class="btn" id="decision8Button">Submit Decision</button>
-              <button type="button" class="btn btn-primary" id="moveon8Button">Next Event</button>
-            </li>
-          </ul>
+        <ul class="list-inline">
+          <li>
+            <div class="radio">
+              <label><input type="radio" name="dec8radio" value=""></label>
+            </div>
+          </li>
+          <li>
+            <div class="radio">
+              <label><input type="radio" name="dec8radio" value=""></label>
+            </div>
+          </li>
+          <li>
+            <button type="button" class="btn" id="decision8Button">Submit Decision</button>
+            <button type="button" class="btn btn-primary" id="moveon8Button">Next Event</button>
+          </li>
+        </ul>
 
       </div>
       <div class="well decision" id="decision9">
         <h2></h2>
         <h4 id="prompt9">DUMMY PROMPT!9</h4>
-          <h4 class="question"></h4>
+        <h4 class="question"></h4>
         <p class="explanation" id="explanationd9-1">
           <em></em>
         </p>
         <p class="explanation" id="explanationd9-2">
           <em></em>
         </p>
-          <ul class="list-inline">
-            <li>
-              <div class="radio">
-                <label><input type="radio" name="dec9radio" value=""></label>
-              </div>
-            </li>
-            <li>
-              <div class="radio">
-                <label><input type="radio" name="dec9radio" value=""></label>
-              </div>
-            </li>
-            <li>
-              <button type="button" class="btn" id="decision9Button">Submit Decision</button>
-              <button type="button" class="btn btn-primary" id="moveon9Button">Next Event</button>
-            </li>
-          </ul>
+        <ul class="list-inline">
+          <li>
+            <div class="radio">
+              <label><input type="radio" name="dec9radio" value=""></label>
+            </div>
+          </li>
+          <li>
+            <div class="radio">
+              <label><input type="radio" name="dec9radio" value=""></label>
+            </div>
+          </li>
+          <li>
+            <button type="button" class="btn" id="decision9Button">Submit Decision</button>
+            <button type="button" class="btn btn-primary" id="moveon9Button">Next Event</button>
+          </li>
+        </ul>
 
       </div>
       <div class="well decision" id="decision10">
         <h2></h2>
         <h4 id="prompt10">DUMMY PROMPT!10</h4>
-          <h4 class="question"></h4>
+        <h4 class="question"></h4>
         <p class="explanation" id="explanationd10-1">
           <em></em>
         </p>
         <p class="explanation" id="explanationd10-2">
           <em></em>
         </p>
-          <ul class="list-inline">
-            <li>
-              <div class="radio">
-                <label><input type="radio" name="dec10radio" value=""></label>
-              </div>
-            </li>
-            <li>
-              <div class="radio">
-                <label><input type="radio" name="dec10radio" value=""></label>
-              </div>
-            </li>
-            <li>
-              <button type="button" class="btn" id="decision10Button">Submit Decision</button>
-              <button type="button" class="btn btn-primary" id="moveon10Button">Next Event</button>
-            </li>
-          </ul>
+        <ul class="list-inline">
+          <li>
+            <div class="radio">
+              <label><input type="radio" name="dec10radio" value=""></label>
+            </div>
+          </li>
+          <li>
+            <div class="radio">
+              <label><input type="radio" name="dec10radio" value=""></label>
+            </div>
+          </li>
+          <li>
+            <button type="button" class="btn" id="decision10Button">Submit Decision</button>
+            <button type="button" class="btn btn-primary" id="moveon10Button">Next Event</button>
+          </li>
+        </ul>
 
       </div>
       <div class="well decision" id="finalDecision">
         <h2></h2>
         <h4 id="prompt10">Final Decision:</h4>
-          <h4 class="question"></h4>
+        <h4 class="question"></h4>
         <p class="explanation" id="explanationdf1">
           <em></em>
         </p>
         <p class="explanation" id="explanationdf2">
           <em></em>
         </p>
-          <ul class="list-inline">
-            <li>
-              <div class="radio">
-                <label><input type="radio" name="decfinalradio" value=""></label>
-              </div>
-            </li>
-            <li>
-              <div class="radio">
-                <label><input type="radio" name="decfinalradio" value=""></label>
-              </div>
-            </li>
-            <li>
-              <button type="button" class="btn" id="finalDecisionButton">Submit Decision</button>
-            </li>
-          </ul>
+        <ul class="list-inline">
+          <li>
+            <div class="radio">
+              <label><input type="radio" name="decfinalradio" value=""></label>
+            </div>
+          </li>
+          <li>
+            <div class="radio">
+              <label><input type="radio" name="decfinalradio" value=""></label>
+            </div>
+          </li>
+          <li>
+            <button type="button" class="btn" id="finalDecisionButton">Submit Decision</button>
+          </li>
+        </ul>
+      </div>
+      <!-- DUMMY PROMPTS END HERE!-->
+      <div class="row">
+        <div class="col-md-1">
         </div>
-            <!-- DUMMY PROMPTS END HERE!-->
+        <div class="col-md-10">
+          <div class="panel panel-default" id="status">
+            <div class="panel-heading">
+              <h1><span class="title"></span> <span class="lastName"></span>'s Current Stats: </h1>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="scoreBox" id="repScore">
+                    <h2>Reputation Points:</h2>
+                    <div class="scoreNumber">
+                      <span class="reputation-points"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 img-column">
+                  <img src="img/flag.jpg" alt="american flag" class="flag-image img-rounded" id="image-center">
+                </div>
+                <div class="col-md-3">
+                  <div class="scoreBox" id="fundScore">
+                    <h2>Campaign Funds:</h2>
+                    <div class="scoreNumber">
+                      <span class="funds"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel-footer">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1">
+        </div>
+      </div>
       <div id="outcome">
         <div class="well" id="win">
           <h2>Congratulations!</h2>
-          <h4>The votes are in, and I am pleased to announce that you have won the election!!   You are now President-Elect <span class="last-name"></span>. Soon, you will receive a call from your competitor to concede. It's time for your victory speech, but don't forget to thank your supporters... You didn't get here on your own.</h4>
+          <h4>The votes are in, and I am pleased to announce that you have won the election!! You are now President-Elect <span class="last-name"></span>. Soon, you will receive a call from your competitor to concede. It's time for your victory speech, but don't forget to thank your supporters... You didn't get here on your own.</h4>
         </div>
         <div class="well" id="lose">
-          <h2>Sorry to say...</h2>
+          <h2>Sorry to say....</h2>
           <h4>You have lost the election. Along the way, you made some poor decisions, and now you must suffer the consequences. Make that dreaded call to your competitor, and go out there and give 'em the best concession speech they've ever heard!</h4>
         </div>
       </div>
-
-
-    </body>
-  </html>
+    </div>
+  </body>
+</html>

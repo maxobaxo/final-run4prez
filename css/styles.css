@@ -20,15 +20,28 @@ button {
   color: white;
 }
 
+.blockButton {
+  display: block;
+  margin: auto;
+}
+
+#moveon1Button {
+  display: none;
+}
+
+#moveon2Button {
+  display: none;
+}
+
+#moveon3Button {
+  display: none;
+}
+
 #status {
   display: none;
   color: black;
   border: none;
   margin-top: 1.5%;
-}
-
-.flag-image {
-  max-width: 90%;
 }
 
 #status .panel-heading, #status .panel-footer {
@@ -37,11 +50,43 @@ button {
   font-family: 'Playfair Display', serif;
   font-family: 'Cardo', serif;
   text-align: center;
+  max-width: auto;
+}
+
+.scoreBox {
+  /*display: block;*/
+  text-align: center;
+  padding-top: 25%;
+  /*border: 1px solid black;*/
+}
+
+#repScore {
+  margin-left: 6%;
+  font-family: times new roman;
+}
+
+#fundScore {
+  margin-right: 6%;
+  font-family: times new roman;
 }
 
 .scoreNumber {
-  font-size: 140px;
   text-align: center;
+  font-size: 75px;
+}
+
+#image-center {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+}
+
+.img-column {
+  /*border: 1px solid black;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden
 }
 
 .decision {
@@ -60,23 +105,18 @@ button {
   text-align: center;
   margin-top: 0;
 }
+
 #win {
   display: none;
 }
+
 #lose {
   display: none;
 }
+
 .explanation {
   display: none;
-}
-#moveon1Button {
-  display: none;
-}
-#moveon2Button {
-  display: none;
-}
-#moveon3Button {
-  display: none;
+  font-size: 20px;
 }
 /*#moveon4Button {
   display: none;
