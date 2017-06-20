@@ -142,7 +142,7 @@ $(document).ready(function() {
     newCandidate.policyDec();
     $("button#decision1Button").hide();
     $("#prompt1").hide();
-    $(".question").hide();
+    $("#question1").hide();
     $(".reputation-points").empty();
     $(".reputation-points").append(newCandidate.reputation);
     $(".funds").empty();
@@ -159,7 +159,7 @@ $(document).ready(function() {
     newCandidate.taxesDec();
     $("button#decision2Button").hide();
     $("#prompt2").hide();
-    $(".question").hide();
+    $("#question2").hide();
     $(".reputation-points").empty();
     $(".reputation-points").append(newCandidate.reputation);
     $(".funds").empty();
@@ -176,7 +176,7 @@ $(document).ready(function() {
     newCandidate.attackDec();
     $("button#decision3Button").hide();
     $("#prompt3").hide();
-    $(".question").hide();
+    $("#question3").hide();
     $(".reputation-points").empty();
     $(".reputation-points").append(newCandidate.reputation);
     $(".funds").empty();
