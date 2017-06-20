@@ -14,7 +14,7 @@ Candidate.prototype.fullName = function() {
   this.fullName = this.firstName + " " + this.lastName;
 };
 
-Candidate.prototype.policyDec = function(){
+Candidate.prototype.choiceOne = function(){
 var radioInput1 = $("input:radio[name=dec1radio]:checked").val();
   if (radioInput1 == "environmental") {
     this.reputation = this.reputation + 5;
@@ -28,7 +28,7 @@ var radioInput1 = $("input:radio[name=dec1radio]:checked").val();
     showExplanationd12();
   };
 };
-Candidate.prototype.taxesDec = function(){
+Candidate.prototype.choiceTwo = function(){
 var radioInput2 = $("input:radio[name=dec2radio]:checked").val();
   if (radioInput2 == "cuttax") {
     this.reputation = this.reputation + 5;
@@ -47,7 +47,7 @@ var radioInput2 = $("input:radio[name=dec2radio]:checked").val();
     showExplanationd23();
   };
 };
-Candidate.prototype.attackDec = function(){
+Candidate.prototype.choiceThree = function(){
 var radioInput3 = $("input:radio[name=dec3radio]:checked").val();
   if (radioInput3 == "attack") {
     this.reputation = this.reputation + 0;
@@ -117,6 +117,45 @@ $(document).ready(function() {
   showExplanationd33 = function() {
     $("#explanationd3-3").show()
   };
+  var turns = 0;
+  nextDecision = function() {
+    turns = turns + 1;
+    if (turns == 6) {
+      $("#finalDecision").show();
+    } else {
+      var counter = Math.floor((Math.random() * decisionPoints.length) + 0);
+      if (decisionPoints[counter] == 2) {
+        $("#decision2").show();
+        decisionPoints.splice(counter, 1);
+      } else if (decisionPoints[counter] == 3) {
+          $("#decision3").show();
+          decisionPoints.splice(counter, 1);
+      } else if (decisionPoints[counter] == 4) {
+          $("#decision4").show();
+          decisionPoints.splice(counter, 1);
+      }  else if (decisionPoints[counter] == 5) {
+          $("#decision5").show();
+          decisionPoints.splice(counter, 1);
+      }  else if (decisionPoints[counter] == 6) {
+          $("#decision6").show();
+          decisionPoints.splice(counter, 1);
+      }  else if (decisionPoints[counter] == 7) {
+          $("#decision7").show();
+          decisionPoints.splice(counter, 1);
+      }  else if (decisionPoints[counter] == 8) {
+          $("#decision8").show();
+          decisionPoints.splice(counter, 1);
+      }  else if (decisionPoints[counter] == 9) {
+          $("#decision9").show();
+          decisionPoints.splice(counter, 1);
+      }  else if (decisionPoints[counter] == 10) {
+          $("#decision10").show();
+          decisionPoints.splice(counter, 1);
+      };
+    }
+  }
+  var decisionPoints = [2, 3, 4, 5, 6, 7, 8, 9, 10]
+
   $("#register").submit(function(event) {
     event.preventDefault();
     var firstName = $("input#first-name").val();
@@ -135,33 +174,97 @@ $(document).ready(function() {
   });
 
   $("button#decision1Button").click(function(){
-    newCandidate.policyDec();
+    newCandidate.choiceOne();
     $("button#decision1Button").hide();
     $("button#moveon1Button").show();
   });
   $("button#moveon1Button").click(function(){
+    nextDecision();
     $("#decision1").hide();
-    $("#decision2").show();
   });
   $("button#decision2Button").click(function(){
-    newCandidate.taxesDec();
+    newCandidate.choiceTwo();
     $("button#decision2Button").hide();
     $("button#moveon2Button").show();
   });
   $("button#moveon2Button").click(function(){
+    nextDecision();
     $("#decision2").hide();
-    $("#decision3").show();
   });
   $("button#decision3Button").click(function(){
-    newCandidate.attackDec();
+    newCandidate.choiceThree();
     $("button#decision3Button").hide();
     $("button#moveon3Button").show();
   });
   $("button#moveon3Button").click(function(){
+    nextDecision();
     $("#decision3").hide();
-    newCandidate.winLose();
   });
-  $("#final-decision-button").submit(function(event) {
-
+  $("button#decision4Button").click(function(){
+    newCandidate.choiceFour();
+    $("button#decision4Button").hide();
+    $("button#moveon4Button").show();
+  });
+  $("button#moveon4Button").click(function(){
+    nextDecision();
+    $("#decision4").hide();
+  });
+  $("button#decision5Button").click(function(){
+    newCandidate.choiceFive();
+    $("button#decision5Button").hide();
+    $("button#moveon5Button").show();
+  });
+  $("button#moveon5Button").click(function(){
+    nextDecision();
+    $("#decision5").hide();
+  });
+  $("button#decision6Button").click(function(){
+    newCandidate.choiceSix();
+    $("button#decision6Button").hide();
+    $("button#moveon6Button").show();
+  });
+  $("button#moveon6Button").click(function(){
+    nextDecision();
+    $("#decision6").hide();
+  });
+  $("button#decision7Button").click(function(){
+    newCandidate.choiceSeven();
+    $("button#decision7Button").hide();
+    $("button#moveon7Button").show();
+  });
+  $("button#moveon7Button").click(function(){
+    nextDecision();
+    $("#decision7").hide();
+  });
+  $("button#decision8Button").click(function(){
+    newCandidate.choiceEight();
+    $("button#decision8Button").hide();
+    $("button#moveon8Button").show();
+  });
+  $("button#moveon8Button").click(function(){
+    nextDecision();
+    $("#decision8").hide();
+  });
+  $("button#decision9Button").click(function(){
+    newCandidate.choiceNine();
+    $("button#decision9Button").hide();
+    $("button#moveon9Button").show();
+  });
+  $("button#moveon9Button").click(function(){
+    nextDecision();
+    $("#decision9").hide();
+  });
+  $("button#decision10Button").click(function(){
+    newCandidate.choiceTen();
+    $("button#decision10Button").hide();
+    $("button#moveon10Button").show();
+  });
+  $("button#moveon10Button").click(function(){
+    nextDecision();
+    $("#decision10").hide();
+  });
+  $("#finalDecisionButton").submit(function(event) {
+    newCandidate.winLose();
+    $("#finalDecision").hide();
   });
 });
