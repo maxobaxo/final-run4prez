@@ -76,7 +76,7 @@
           </li>
           <li>
             <button type="button" class="btn btn-block" id="decision1Button">Submit Decision</button>
-            <button type="button" class="btn" id="moveon1Button">Next Event</button>
+            <button type="button" class="btn moveOnButtons" id="moveon1Button">Next Event</button>
           </li>
         </ul>
       </div>
@@ -107,7 +107,7 @@
           </li>
           <li>
             <button type="button" class="btn blockButton" id="decision2Button">Submit Decision</button>
-            <button type="button" class="btn" id="moveon2Button">Next Event</button>
+            <button type="button" class="btn moveOnButtons" id="moveon2Button">Next Event</button>
           </li>
         </ul>
       </div>
@@ -138,35 +138,39 @@
           </li>
           <li>
             <button type="button" class="btn blockButton" id="decision3Button">Submit Decision</button>
-            <button type="button" class="btn" id="moveon3Button">Next Event</button>
+            <button type="button" class="btn moveOnButtons" id="moveon3Button">Next Event</button>
           </li>
         </ul>
       </div>
       <!-- DUMMY PROMPTS BEGIN HERE!-->
       <div class="well decision" id="decision4">
-        <h2></h2>
-        <h4 id="prompt4">DUMMY PROMPT!4</h4>
-        <h4 class="question"></h4>
-        <p class="explanation" id="explanationd4-1">
-          <em></em>
-        </p>
-        <p class="explanation" id="explanationd4-2">
-          <em></em>
-        </p>
-        <ul class="list-inline">
+        <h2>Tweeting President</h2>
+        <h4 id="prompt4">You are mentioned in a recent tweet from the incumbent President. He calls you a drunk, and claims you would empty the country's coffers like you've emptied so many bottles.</h4>
+        <h4 class="question" id="question4">How do you handle the situation?</h4>
+        <p class="explanation" id="explanation4A"><em>Your response to the president is no surprise to anyone. You really are a typical politician.
+        </em></p>
+        <p class="explanation" id="explanation4B"><em>Your snark is lauded by your base, but the general population now views you as a condescending elitist.</em></p>
+        <p class="explanation" id="explanation4C"><em>Your lack of a response provokes the president to eat his phone. He suffocates, and the VP takes the helm. You're that much closer.</em></p>
+        <ul class="list-unstyled">
           <li>
             <div class="radio">
-              <label><input type="radio" name="dec4radio" value=""></label>
+              <label><input type="radio" name="dec4radio" value="tweet-back">Tweet Back an Attack! The best defense is a good offense.</label>
             </div>
           </li>
           <li>
             <div class="radio">
-              <label><input type="radio" name="dec4radio" value=""></label>
+              <label><input type="radio" name="dec4radio" value="retweet">Retweet him to your followers, mocking his insecurity and outrageous conspiracy theories. </label>
             </div>
           </li>
           <li>
-            <button type="button" class="btn" id="decision4Button">Submit Decision</button>
-            <button type="button" class="btn btn-primary" id="moveon4Button">Next Event</button>
+            <div class="radio">
+              <label><input type="radio" name="dec4radio" value="ignore">Ignore it. That'll REALLY piss him off. </label>
+            </div>
+          </li>
+
+          <li>
+            <button type="button" class="btn blockButton" id="decision4Button">Submit Decision</button>
+            <button type="button" class="btn moveOnButtons" id="moveon4Button">Next Event</button>
           </li>
         </ul>
 

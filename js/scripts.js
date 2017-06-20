@@ -61,6 +61,25 @@ Candidate.prototype.choiceThree = function(radioInput3){
   }
 };
 
+Candidate.prototype.choiceFour = function(radioInput4){
+  if (radioInput4 == "tweet-back") {
+    this.reputation = this.reputation + 0;
+    this.funding = this.funding - 500;
+    console.log(this);
+    return "4A";
+  } else if (radioInput4 == "retweet") {
+    this.reputation = this.reputation - 3;
+    console.log(this);
+    return "4B";
+  } else if (radioInput4 == "ignore") {
+    this.reputation = this.reputation + 3;
+    this.funding = this.funding - 500;
+    console.log(this);
+    return "4C";
+  }
+};
+
+
 Candidate.prototype.winLose = function() {
   if (this.reputation >= 9) {
     victoryReveal();
@@ -88,16 +107,6 @@ $(document).ready(function() {
   };
   lossReveal = function() {
     $("#lose").show();
-  };
-
-  showExplanationd31 = function() {
-    $("#explanationd3-1").show()
-  };
-  showExplanationd32 = function() {
-    $("#explanationd3-2").show()
-  };
-  showExplanationd33 = function() {
-    $("#explanationd3-3").show()
   };
 
   var turns = 0;
@@ -217,10 +226,20 @@ $(document).ready(function() {
   });
 
   $("button#decision4Button").click(function(){
-    newCandidate.choiceFour();
+    var radioInput4 = $("input:radio[name=dec4radio]:checked").val();
+    var choiceFour = newCandidate.choiceFour(radioInput4);
+    $("#explanation" + choiceFour).show();
+
     $("button#decision4Button").hide();
+    $("#prompt4").hide();
+    $("#question4").hide();
+    $(".reputation-points").empty();
+    $(".reputation-points").append(newCandidate.reputation);
+    $(".funds").empty();
+    $(".funds").append(newCandidate.funding);
     $("button#moveon4Button").show();
   });
+
   $("button#moveon4Button").click(function(){
     nextDecision();
     $("#decision4").hide();
