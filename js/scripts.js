@@ -79,6 +79,23 @@ Candidate.prototype.choiceFour = function(radioInput4){
   }
 };
 
+Candidate.prototype.choiceSix = function(radioInput6){
+  if (radioInput6 == "spotlight") {
+    this.reputation = this.reputation + 2;
+    this.funding = this.funding - 500;
+    console.log(this);
+    return "6A";
+  } else if (radioInput6 == "timbuktu") {
+    this.reputation = this.reputation - 5;
+    console.log(this);
+    return "6B";
+  } else if (radioInput6 == "prFirm") {
+    this.reputation = this.reputation + 5;
+    this.funding = this.funding - 500;
+    console.log(this);
+    return "6C";
+  }
+};
 
 Candidate.prototype.winLose = function() {
   if (this.reputation >= 9) {
@@ -254,8 +271,17 @@ $(document).ready(function() {
     $("#decision5").hide();
   });
   $("button#decision6Button").click(function(){
-    newCandidate.choiceSix();
+    var radioInput6 = $("input:radio[name=dec6radio]:checked").val();
+    var choiceSix = newCandidate.choiceSix(radioInput6);
+    $("#explanation" + choiceSix).show();
+
     $("button#decision6Button").hide();
+    $("#prompt6").hide();
+    $("#question6").hide();
+    $(".reputation-points").empty();
+    $(".reputation-points").append(newCandidate.reputation);
+    $(".funds").empty();
+    $(".funds").append(newCandidate.funding);
     $("button#moveon6Button").show();
   });
   $("button#moveon6Button").click(function(){
