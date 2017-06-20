@@ -97,6 +97,24 @@ Candidate.prototype.choiceSix = function(radioInput6){
   }
 };
 
+Candidate.prototype.choiceEight = function(radioInput8){
+  if (radioInput8 == "grudge") {
+    this.reputation = this.reputation - 2;
+    this.funding = this.funding - 500;
+    console.log(this);
+    return "8A";
+  } else if (radioInput8 == "introspection") {
+    this.reputation = this.reputation + 0;
+    console.log(this);
+    return "8B";
+  } else if (radioInput8 == "on-air") {
+    this.reputation = this.reputation + 5;
+    this.funding = this.funding - 500;
+    console.log(this);
+    return "8C";
+  }
+};
+
 Candidate.prototype.winLose = function() {
   if (this.reputation >= 9) {
     victoryReveal();
@@ -298,8 +316,17 @@ $(document).ready(function() {
     $("#decision7").hide();
   });
   $("button#decision8Button").click(function(){
-    newCandidate.choiceEight();
+    var radioInput8 = $("input:radio[name=dec8radio]:checked").val();
+    var choiceEight = newCandidate.choiceEight(radioInput8);
+    $("#explanation" + choiceEight).show();
+
     $("button#decision8Button").hide();
+    $("#prompt8").hide();
+    $("#question8").hide();
+    $(".reputation-points").empty();
+    $(".reputation-points").append(newCandidate.reputation);
+    $(".funds").empty();
+    $(".funds").append(newCandidate.funding);
     $("button#moveon8Button").show();
   });
   $("button#moveon8Button").click(function(){
