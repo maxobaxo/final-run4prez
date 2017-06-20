@@ -115,6 +115,19 @@ Candidate.prototype.choiceEight = function(radioInput8){
   }
 };
 
+Candidate.prototype.choiceTen = function(radioInput10){
+  if (radioInput10 == "me-first") {
+    this.reputation = this.reputation - 5;
+    this.funding = this.funding - 1000;
+    console.log(this);
+    return "10A";
+  } else if (radioInput10 == "handsome") {
+    this.reputation = this.reputation + 10;
+    console.log(this);
+    return "10B";
+  }
+};
+
 Candidate.prototype.winLose = function() {
   if (this.reputation >= 9) {
     victoryReveal();
@@ -343,10 +356,20 @@ $(document).ready(function() {
     $("#decision9").hide();
   });
   $("button#decision10Button").click(function(){
-    newCandidate.choiceTen();
+    var radioInput10 = $("input:radio[name=dec10radio]:checked").val();
+    var choiceTen = newCandidate.choiceTen(radioInput10);
+    $("#explanation" + choiceTen).show();
+
     $("button#decision10Button").hide();
+    $("#prompt10").hide();
+    $("#question10").hide();
+    $(".reputation-points").empty();
+    $(".reputation-points").append(newCandidate.reputation);
+    $(".funds").empty();
+    $(".funds").append(newCandidate.funding);
     $("button#moveon10Button").show();
   });
+  
   $("button#moveon10Button").click(function(){
     nextDecision();
     $("#decision10").hide();
