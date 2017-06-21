@@ -25,7 +25,11 @@ button {
   margin: auto;
 }
 
-/*#moveon1Button {
+.moveOnButtons {
+  display: none;
+}
+
+#moveon1Button {
   display: none;
 }
 
@@ -35,9 +39,33 @@ button {
 
 #moveon3Button {
   display: none;
-}*/
+}
 
-.moveOnButtons {
+#moveon4Button {
+  display: none;
+}
+
+#moveon5Button {
+  display: none;
+}
+
+#moveon6Button {
+  display: none;
+}
+
+#moveon7Button {
+  display: none;
+}
+
+#moveon8Button {
+  display: none;
+}
+
+#moveon9Button {
+  display: none;
+}
+
+#moveon10Button {
   display: none;
 }
 

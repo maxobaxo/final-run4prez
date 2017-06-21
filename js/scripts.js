@@ -79,6 +79,23 @@ Candidate.prototype.choiceFour = function(radioInput4){
   }
 };
 
+Candidate.prototype.choiceFive = function(radioInput5){
+  if (radioInput5 == "Decline") {
+    this.reputation = this.reputation + 2;
+    console.log(this);
+    return "5A";
+  } else if (radioInput5 == "Cyber") {
+    this.reputation = this.reputation + 5;
+    this.funding = this.funding + 1000;
+    console.log(this);
+    return "5B";
+  } else if (radioInput5 == "Nakedtruth") {
+    this.reputation = this.reputation + 7;
+    console.log(this);
+    return "5C";
+  }
+};
+
 Candidate.prototype.choiceSix = function(radioInput6){
   if (radioInput6 == "spotlight") {
     this.reputation = this.reputation + 2;
@@ -97,6 +114,25 @@ Candidate.prototype.choiceSix = function(radioInput6){
   }
 };
 
+Candidate.prototype.choiceSeven = function(radioInput7){
+  if (radioInput7 == "Force") {
+    this.reputation = this.reputation + 3;
+    this.funding = this.funding + 750;
+    console.log(this);
+    return "7A";
+  } else if (radioInput7 == "Accuse") {
+    this.reputation = this.reputation - 5;
+    this.funding = this.funding + 100;
+    console.log(this);
+    return "7B";
+  } else if (radioInput7 == "Maury") {
+    this.reputation = this.reputation + 10;
+    this.funding = this.funding - 500;
+    console.log(this);
+    return "7C";
+  }
+};
+
 Candidate.prototype.choiceEight = function(radioInput8){
   if (radioInput8 == "grudge") {
     this.reputation = this.reputation - 2;
@@ -112,6 +148,20 @@ Candidate.prototype.choiceEight = function(radioInput8){
     this.funding = this.funding - 500;
     console.log(this);
     return "8C";
+  }
+};
+
+Candidate.prototype.choiceNine = function(radioInput9){
+  if (radioInput9 == "public") {
+    this.reputation = this.reputation + 7;
+    this.funding = this.funding + 1000;
+    console.log(this);
+    return "9A";
+  } else if (radioInput9 == "private") {
+    this.reputation = this.reputation + 1;
+    this.funding = this.funding + 1000;
+    console.log(this);
+    return "9B";
   }
 };
 
@@ -292,15 +342,27 @@ $(document).ready(function() {
     nextDecision();
     $("#decision4").hide();
   });
+
   $("button#decision5Button").click(function(){
-    newCandidate.choiceFive();
+    var radioInput5 = $("input:radio[name=dec5radio]:checked").val();
+    var choiceFive = newCandidate.choiceFive(radioInput5);
+    $("#explanation" + choiceFive).show();
+
     $("button#decision5Button").hide();
+    $("#prompt5").hide();
+    $("#question5").hide();
+    $(".reputation-points").empty();
+    $(".reputation-points").append(newCandidate.reputation);
+    $(".funds").empty();
+    $(".funds").append(newCandidate.funding);
     $("button#moveon5Button").show();
   });
+
   $("button#moveon5Button").click(function(){
     nextDecision();
     $("#decision5").hide();
   });
+
   $("button#decision6Button").click(function(){
     var radioInput6 = $("input:radio[name=dec6radio]:checked").val();
     var choiceSix = newCandidate.choiceSix(radioInput6);
@@ -315,19 +377,32 @@ $(document).ready(function() {
     $(".funds").append(newCandidate.funding);
     $("button#moveon6Button").show();
   });
+
   $("button#moveon6Button").click(function(){
     nextDecision();
     $("#decision6").hide();
   });
+
   $("button#decision7Button").click(function(){
-    newCandidate.choiceSeven();
+    var radioInput7 = $("input:radio[name=dec7radio]:checked").val();
+    var choiceSeven = newCandidate.choiceSeven(radioInput7);
+    $("#explanation" + choiceSeven).show();
+
     $("button#decision7Button").hide();
+    $("#prompt7").hide();
+    $("#question7").hide();
+    $(".reputation-points").empty();
+    $(".reputation-points").append(newCandidate.reputation);
+    $(".funds").empty();
+    $(".funds").append(newCandidate.funding);
     $("button#moveon7Button").show();
   });
+
   $("button#moveon7Button").click(function(){
     nextDecision();
     $("#decision7").hide();
   });
+
   $("button#decision8Button").click(function(){
     var radioInput8 = $("input:radio[name=dec8radio]:checked").val();
     var choiceEight = newCandidate.choiceEight(radioInput8);
@@ -342,19 +417,32 @@ $(document).ready(function() {
     $(".funds").append(newCandidate.funding);
     $("button#moveon8Button").show();
   });
+
   $("button#moveon8Button").click(function(){
     nextDecision();
     $("#decision8").hide();
   });
+
   $("button#decision9Button").click(function(){
-    newCandidate.choiceNine();
+    var radioInput9 = $("input:radio[name=dec9radio]:checked").val();
+    var choiceNine = newCandidate.choiceNine(radioInput9);
+    $("#explanation" + choiceNine).show();
+
     $("button#decision9Button").hide();
+    $("#prompt9").hide();
+    $("#question9").hide();
+    $(".reputation-points").empty();
+    $(".reputation-points").append(newCandidate.reputation);
+    $(".funds").empty();
+    $(".funds").append(newCandidate.funding);
     $("button#moveon9Button").show();
   });
+
   $("button#moveon9Button").click(function(){
     nextDecision();
     $("#decision9").hide();
   });
+
   $("button#decision10Button").click(function(){
     var radioInput10 = $("input:radio[name=dec10radio]:checked").val();
     var choiceTen = newCandidate.choiceTen(radioInput10);
@@ -369,11 +457,12 @@ $(document).ready(function() {
     $(".funds").append(newCandidate.funding);
     $("button#moveon10Button").show();
   });
-  
+
   $("button#moveon10Button").click(function(){
     nextDecision();
     $("#decision10").hide();
   });
+
   $("#finalDecisionButton").click(function() {
     newCandidate.winLose();
     $("#finalDecision").hide();
