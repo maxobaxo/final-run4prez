@@ -215,6 +215,14 @@ Candidate.prototype.role = function() {
   return this.playerTitle;
 };
 
+function validateForm(firstName, lastName) {
+  if (firstName === "" || lastName === "") {
+    return false;
+  } else {
+    return true;
+  }
+};
+
 //user interface logic
 $(document).ready(function() {
   var newCandidate;
@@ -273,29 +281,38 @@ $(document).ready(function() {
     var age = $("input#age").val();
     var gender = $("input#gender").val()
     newCandidate = new Candidate(firstName, lastName, age, gender);
-    var fullName = newCandidate.fullName();
-    $(".title").text(newCandidate.role());
-    $(".lastName").text(newCandidate.lastName);
-    $("#intro").hide();
-    $(".reputation-points").append(newCandidate.reputation);
-    $(".funds").append(newCandidate.funding);
-    $("#status").show();
-    $("#decision1").show();
+    var filledForm = validateForm(firstName, lastName);
+    if (filledForm === true) {
+      var fullName = newCandidate.fullName();
+      $(".title").text(newCandidate.role());
+      $(".lastName").text(newCandidate.lastName);
+      $("#intro").hide();
+      $(".reputation-points").append(newCandidate.reputation);
+      $(".funds").append(newCandidate.funding);
+      $("#status").show();
+      $("#decision1").show();
+    } else {
+      alert("You must enter your first and last name, silly-pants!")
+    }
   });
 
   $("button#decision1Button").click(function(){
     var radioInput1 = $("input:radio[name=dec1radio]:checked").val();
-    var choiceOne = newCandidate.choiceOne(radioInput1);
-    $("#explanation" + choiceOne).show();
+    if (radioInput1 === undefined) {
+      alert("Answer the question, silly-pants!")
+    } else {
+      var choiceOne = newCandidate.choiceOne(radioInput1);
+      $("#explanation" + choiceOne).show();
 
-    $("button#decision1Button").hide();
-    $("#prompt1").hide();
-    $("#question1").hide();
-    $(".reputation-points").empty();
-    $(".reputation-points").append(newCandidate.reputation);
-    $(".funds").empty();
-    $(".funds").append(newCandidate.funding);
-    $("button#moveon1Button").show();
+      $("button#decision1Button").hide();
+      $("#prompt1").hide();
+      $("#question1").hide();
+      $(".reputation-points").empty();
+      $(".reputation-points").append(newCandidate.reputation);
+      $(".funds").empty();
+      $(".funds").append(newCandidate.funding);
+      $("button#moveon1Button").show();
+    }
   });
 
   $("button#moveon1Button").click(function(){
@@ -305,17 +322,21 @@ $(document).ready(function() {
 
   $("button#decision2Button").click(function(){
     var radioInput2 = $("input:radio[name=dec2radio]:checked").val();
-    var choiceTwo = newCandidate.choiceTwo(radioInput2);
-    $("#explanation" + choiceTwo).show();
+    if (radioInput2 === undefined) {
+      alert("Answer the question, silly-pants!")
+    } else {
+      var choiceTwo = newCandidate.choiceTwo(radioInput2);
+      $("#explanation" + choiceTwo).show();
 
-    $("button#decision2Button").hide();
-    $("#prompt2").hide();
-    $("#question2").hide();
-    $(".reputation-points").empty();
-    $(".reputation-points").append(newCandidate.reputation);
-    $(".funds").empty();
-    $(".funds").append(newCandidate.funding);
-    $("button#moveon2Button").show();
+      $("button#decision2Button").hide();
+      $("#prompt2").hide();
+      $("#question2").hide();
+      $(".reputation-points").empty();
+      $(".reputation-points").append(newCandidate.reputation);
+      $(".funds").empty();
+      $(".funds").append(newCandidate.funding);
+      $("button#moveon2Button").show();
+    }
   });
 
   $("button#moveon2Button").click(function(){
@@ -325,17 +346,21 @@ $(document).ready(function() {
 
   $("button#decision3Button").click(function(){
     var radioInput3 = $("input:radio[name=dec3radio]:checked").val();
-    var choiceThree = newCandidate.choiceThree(radioInput3);
-    $("#explanation" + choiceThree).show();
+    if (radioInput3 === undefined) {
+      alert("Answer the question, silly-pants!")
+    } else {
+      var choiceThree = newCandidate.choiceThree(radioInput3);
+      $("#explanation" + choiceThree).show();
 
-    $("button#decision3Button").hide();
-    $("#prompt3").hide();
-    $("#question3").hide();
-    $(".reputation-points").empty();
-    $(".reputation-points").append(newCandidate.reputation);
-    $(".funds").empty();
-    $(".funds").append(newCandidate.funding);
-    $("button#moveon3Button").show();
+      $("button#decision3Button").hide();
+      $("#prompt3").hide();
+      $("#question3").hide();
+      $(".reputation-points").empty();
+      $(".reputation-points").append(newCandidate.reputation);
+      $(".funds").empty();
+      $(".funds").append(newCandidate.funding);
+      $("button#moveon3Button").show();
+    }
   });
 
   $("button#moveon3Button").click(function(){
@@ -345,17 +370,21 @@ $(document).ready(function() {
 
   $("button#decision4Button").click(function(){
     var radioInput4 = $("input:radio[name=dec4radio]:checked").val();
-    var choiceFour = newCandidate.choiceFour(radioInput4);
-    $("#explanation" + choiceFour).show();
+    if (radioInput4 === undefined) {
+      alert("Answer the question, silly-pants!")
+    } else {
+      var choiceFour = newCandidate.choiceFour(radioInput4);
+      $("#explanation" + choiceFour).show();
 
-    $("button#decision4Button").hide();
-    $("#prompt4").hide();
-    $("#question4").hide();
-    $(".reputation-points").empty();
-    $(".reputation-points").append(newCandidate.reputation);
-    $(".funds").empty();
-    $(".funds").append(newCandidate.funding);
-    $("button#moveon4Button").show();
+      $("button#decision4Button").hide();
+      $("#prompt4").hide();
+      $("#question4").hide();
+      $(".reputation-points").empty();
+      $(".reputation-points").append(newCandidate.reputation);
+      $(".funds").empty();
+      $(".funds").append(newCandidate.funding);
+      $("button#moveon4Button").show();
+    }
   });
 
   $("button#moveon4Button").click(function(){
@@ -365,17 +394,21 @@ $(document).ready(function() {
 
   $("button#decision5Button").click(function(){
     var radioInput5 = $("input:radio[name=dec5radio]:checked").val();
-    var choiceFive = newCandidate.choiceFive(radioInput5);
-    $("#explanation" + choiceFive).show();
+    if (radioInput5 === undefined) {
+      alert("Answer the question, silly-pants!")
+    } else {
+      var choiceFive = newCandidate.choiceFive(radioInput5);
+      $("#explanation" + choiceFive).show();
 
-    $("button#decision5Button").hide();
-    $("#prompt5").hide();
-    $("#question5").hide();
-    $(".reputation-points").empty();
-    $(".reputation-points").append(newCandidate.reputation);
-    $(".funds").empty();
-    $(".funds").append(newCandidate.funding);
-    $("button#moveon5Button").show();
+      $("button#decision5Button").hide();
+      $("#prompt5").hide();
+      $("#question5").hide();
+      $(".reputation-points").empty();
+      $(".reputation-points").append(newCandidate.reputation);
+      $(".funds").empty();
+      $(".funds").append(newCandidate.funding);
+      $("button#moveon5Button").show();
+    }
   });
 
   $("button#moveon5Button").click(function(){
@@ -385,17 +418,21 @@ $(document).ready(function() {
 
   $("button#decision6Button").click(function(){
     var radioInput6 = $("input:radio[name=dec6radio]:checked").val();
-    var choiceSix = newCandidate.choiceSix(radioInput6);
-    $("#explanation" + choiceSix).show();
+    if (radioInput6 === undefined) {
+      alert("Answer the question, silly-pants!")
+    } else {
+      var choiceSix = newCandidate.choiceSix(radioInput6);
+      $("#explanation" + choiceSix).show();
 
-    $("button#decision6Button").hide();
-    $("#prompt6").hide();
-    $("#question6").hide();
-    $(".reputation-points").empty();
-    $(".reputation-points").append(newCandidate.reputation);
-    $(".funds").empty();
-    $(".funds").append(newCandidate.funding);
-    $("button#moveon6Button").show();
+      $("button#decision6Button").hide();
+      $("#prompt6").hide();
+      $("#question6").hide();
+      $(".reputation-points").empty();
+      $(".reputation-points").append(newCandidate.reputation);
+      $(".funds").empty();
+      $(".funds").append(newCandidate.funding);
+      $("button#moveon6Button").show();
+    }
   });
 
   $("button#moveon6Button").click(function(){
@@ -405,17 +442,21 @@ $(document).ready(function() {
 
   $("button#decision7Button").click(function(){
     var radioInput7 = $("input:radio[name=dec7radio]:checked").val();
-    var choiceSeven = newCandidate.choiceSeven(radioInput7);
-    $("#explanation" + choiceSeven).show();
+    if (radioInput7 === undefined) {
+      alert("Answer the question, silly-pants!")
+    } else {
+      var choiceSeven = newCandidate.choiceSeven(radioInput7);
+      $("#explanation" + choiceSeven).show();
 
-    $("button#decision7Button").hide();
-    $("#prompt7").hide();
-    $("#question7").hide();
-    $(".reputation-points").empty();
-    $(".reputation-points").append(newCandidate.reputation);
-    $(".funds").empty();
-    $(".funds").append(newCandidate.funding);
-    $("button#moveon7Button").show();
+      $("button#decision7Button").hide();
+      $("#prompt7").hide();
+      $("#question7").hide();
+      $(".reputation-points").empty();
+      $(".reputation-points").append(newCandidate.reputation);
+      $(".funds").empty();
+      $(".funds").append(newCandidate.funding);
+      $("button#moveon7Button").show();
+    }
   });
 
   $("button#moveon7Button").click(function(){
@@ -425,18 +466,22 @@ $(document).ready(function() {
 
   $("button#decision8Button").click(function(){
     var radioInput8 = $("input:radio[name=dec8radio]:checked").val();
-    var choiceEight = newCandidate.choiceEight(radioInput8);
-    $("#explanation" + choiceEight).show();
+    if (radioInput8 === undefined) {
+      alert("Answer the question, silly-pants!")
+    } else {
+      var choiceEight = newCandidate.choiceEight(radioInput8);
+      $("#explanation" + choiceEight).show();
 
-    $(".firstName").append(newCandidate.firstName);
-    $("button#decision8Button").hide();
-    $("#prompt8").hide();
-    $("#question8").hide();
-    $(".reputation-points").empty();
-    $(".reputation-points").append(newCandidate.reputation);
-    $(".funds").empty();
-    $(".funds").append(newCandidate.funding);
-    $("button#moveon8Button").show();
+      $(".firstName").append(newCandidate.firstName);
+      $("button#decision8Button").hide();
+      $("#prompt8").hide();
+      $("#question8").hide();
+      $(".reputation-points").empty();
+      $(".reputation-points").append(newCandidate.reputation);
+      $(".funds").empty();
+      $(".funds").append(newCandidate.funding);
+      $("button#moveon8Button").show();
+    }
   });
 
   $("button#moveon8Button").click(function(){
@@ -446,17 +491,21 @@ $(document).ready(function() {
 
   $("button#decision9Button").click(function(){
     var radioInput9 = $("input:radio[name=dec9radio]:checked").val();
-    var choiceNine = newCandidate.choiceNine(radioInput9);
-    $("#explanation" + choiceNine).show();
+    if (radioInput9 === undefined) {
+      alert("Answer the question, silly-pants!")
+    } else {
+      var choiceNine = newCandidate.choiceNine(radioInput9);
+      $("#explanation" + choiceNine).show();
 
-    $("button#decision9Button").hide();
-    $("#prompt9").hide();
-    $("#question9").hide();
-    $(".reputation-points").empty();
-    $(".reputation-points").append(newCandidate.reputation);
-    $(".funds").empty();
-    $(".funds").append(newCandidate.funding);
-    $("button#moveon9Button").show();
+      $("button#decision9Button").hide();
+      $("#prompt9").hide();
+      $("#question9").hide();
+      $(".reputation-points").empty();
+      $(".reputation-points").append(newCandidate.reputation);
+      $(".funds").empty();
+      $(".funds").append(newCandidate.funding);
+      $("button#moveon9Button").show();
+    }
   });
 
   $("button#moveon9Button").click(function(){
@@ -466,17 +515,21 @@ $(document).ready(function() {
 
   $("button#decision10Button").click(function(){
     var radioInput10 = $("input:radio[name=dec10radio]:checked").val();
-    var choiceTen = newCandidate.choiceTen(radioInput10);
-    $("#explanation" + choiceTen).show();
+    if (radioInput10 === undefined) {
+      alert("Answer the question, silly-pants!")
+    } else {
+      var choiceTen = newCandidate.choiceTen(radioInput10);
+      $("#explanation" + choiceTen).show();
 
-    $("button#decision10Button").hide();
-    $("#prompt10").hide();
-    $("#question10").hide();
-    $(".reputation-points").empty();
-    $(".reputation-points").append(newCandidate.reputation);
-    $(".funds").empty();
-    $(".funds").append(newCandidate.funding);
-    $("button#moveon10Button").show();
+      $("button#decision10Button").hide();
+      $("#prompt10").hide();
+      $("#question10").hide();
+      $(".reputation-points").empty();
+      $(".reputation-points").append(newCandidate.reputation);
+      $(".funds").empty();
+      $(".funds").append(newCandidate.funding);
+      $("button#moveon10Button").show();
+    }
   });
 
   $("button#moveon10Button").click(function(){
@@ -486,18 +539,22 @@ $(document).ready(function() {
 
   $("button#finalDecisionButton").click(function() {
     var radioInputFinal = $("input:radio[name=decfinalradio]:checked").val();
-    var choiceFinal = newCandidate.choiceFinal(radioInputFinal);
-    $("#explanation" + choiceFinal).show();
+    if (radioInputFinal === undefined) {
+      alert("Answer the question, silly-pants!")
+    } else {
+      var choiceFinal = newCandidate.choiceFinal(radioInputFinal);
+      $("#explanation" + choiceFinal).show();
 
-    $("button#finalDecisionButton").hide();
-    $("#prompt-final").hide();
-    $("#question-final").hide();
-    $(".reputation-points").empty();
-    $(".reputation-points").append(newCandidate.reputation);
-    $(".funds").empty();
-    $(".funds").append(newCandidate.funding);
-    $("#viewResults").show();
-  })
+      $("button#finalDecisionButton").hide();
+      $("#prompt-final").hide();
+      $("#question-final").hide();
+      $(".reputation-points").empty();
+      $(".reputation-points").append(newCandidate.reputation);
+      $(".funds").empty();
+      $(".funds").append(newCandidate.funding);
+      $("#viewResults").show();
+    }
+  });
 
   $("#viewResults").click(function() {
     $(".last-name").append(newCandidate.lastName);
