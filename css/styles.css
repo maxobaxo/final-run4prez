@@ -92,7 +92,7 @@ button {
   margin-top: 1.5%;
 }
 
-#status .panel-heading, #status .panel-footer {
+#status .panel-heading, #status .panel-footer, #win .panel-heading, #win .panel-footer, #lose .panel-heading, #lose .panel-footer, #campaignBroke .panel-heading, #campaignBroke .panel-footer {
   background-color: #AE083B;
   color: white;
   font-family: 'Playfair Display', serif;
@@ -102,10 +102,8 @@ button {
 }
 
 .scoreBox {
-  /*display: block;*/
   text-align: center;
   padding-top: 25%;
-  /*border: 1px solid black;*/
 }
 
 #repScore {
@@ -130,11 +128,17 @@ button {
 }
 
 .img-column {
-  /*border: 1px solid black;*/
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden
+}
+
+.img-end {
+  display: block;
+  margin: auto;
+  align-items: center;
+  max-width: 50%;
 }
 
 .decision {
@@ -149,6 +153,11 @@ button {
   font-style: italic;
 }
 
+#outcome {
+  font-family: 'Playfair Display', serif;
+  font-family: 'Cardo', serif;
+}
+
 #outcome h2 {
   text-align: center;
   margin-top: 0;
@@ -156,14 +165,17 @@ button {
 
 #win {
   display: none;
+  border: none;
 }
 
 #lose {
   display: none;
+  border: none;
 }
 
 #campaignBroke {
   display: none;
+  border: none;
 }
 
 .explanation {
