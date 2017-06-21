@@ -1,8 +1,10 @@
 # Run 4 Prez #
-An exercise for Epicodus Into to Programming | 06.21.17
+An exercise for Intro to Programming at Epicodus | 06.21.17
+
+By Rena Rallis, Max Scher, Steve Spitz, Nathan Stewart
 
 ### Description ###
-{This webpage is an interactive role-playing game where the user submits him or herself as a candidate for the US Presidency. The journey requires the candidate to make strategic decisions, which ultimately determine the outcome of the election.}
+This webpage is an interactive role-playing game where the user submits him or herself as a candidate for the US Presidency. The journey requires the candidate to make strategic decisions, which ultimately determine the outcome of the election.
 
 ### Setup/Installation Requirements ###
 * Copy URL from GitHub repository
@@ -13,20 +15,24 @@ An exercise for Epicodus Into to Programming | 06.21.17
 
 ### Specifications ###
 * It can create a candidate based on user input.
- - Input: name, age, gender
- - Output: "Max", "25", "male"
-* It can maintain a current status for the candidates funding and reputation.
- - Input: "poor candidate decision"
- - Output: "reputation: lacking"; funding: "$10k"
-* It can influence the candidates reputation and funding based on the candidate's decision.
- - Input: Candidate with 5 points reputation points accepts bribe from large corporation.
- - Output: Reputation: 3 points
-* It can determine the winner of the election based on cumulative reputation and funding totals.
- - Input: Reputation: 15 points
+ - Input: [firstName: Max, lastName: Aurelius, age: 25, gender: male]
+ - Output: "Congressman Aurelius's Current Stats"
+ * It can update and return the value of a candidate's reputation points and funding amount based on the candidate's new decision and its predetermined values.
+ - Input: Candidate with 5 Reputation Points and Funds: $500 makes new decision.
+ - Output: Reputation Points: 10, Campaign Funds: $300
+* It can determine the winner of the election based on the candidate's cumulative reputation points.
+ - Input: Reputation: 20 points
  - Output: "You win the election!"
+* It can force the candidate to withdraw from the race if (s)he ends the campaign with no liquid funds.
+- Input: Candidate reaches final decision with Campaign Funds: - $150
+- Output: "You are broke, you must withdraw"
+* It can randomly decide which decision a candidate is forced to make.
+* It can set a limit on the number of decisions a candidate makes in their campaign, which allows for multiple unique user experiences.
 
 ### Technologies Used: ###
-{html, Bootstrap, CSS, JavaScript, jQuery, GitHUb}
+html, Bootstrap, CSS, JavaScript, jQuery, GitHUb
 
 ### Legal ###
-Copyright (c) 2017 Max Scher, Rena Rallis, Nathan Stewart, Steve Spitz
+Copyright &copy; 2017 Rena Rallis, Max Scher, Steve Spitz, Nathan Stewart
+
+This application is licensed under the MIT License
