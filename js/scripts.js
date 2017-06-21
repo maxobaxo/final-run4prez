@@ -46,7 +46,7 @@ Candidate.prototype.choiceTwo = function(radioInput2){
 Candidate.prototype.choiceThree = function(radioInput3){
   if (radioInput3 == "attack") {
     this.reputation = this.reputation + 0;
-    this.funding = this.funding - 500;
+    this.funding = this.funding - 250;
     console.log(this);
     return "3A";
   } else if (radioInput3 == "giveup") {
@@ -64,7 +64,7 @@ Candidate.prototype.choiceThree = function(radioInput3){
 Candidate.prototype.choiceFour = function(radioInput4){
   if (radioInput4 == "tweet-back") {
     this.reputation = this.reputation + 0;
-    this.funding = this.funding - 500;
+    this.funding = this.funding - 200;
     console.log(this);
     return "4A";
   } else if (radioInput4 == "retweet") {
@@ -73,7 +73,6 @@ Candidate.prototype.choiceFour = function(radioInput4){
     return "4B";
   } else if (radioInput4 == "ignore") {
     this.reputation = this.reputation + 3;
-    this.funding = this.funding - 500;
     console.log(this);
     return "4C";
   }
@@ -86,7 +85,7 @@ Candidate.prototype.choiceFive = function(radioInput5){
     return "5A";
   } else if (radioInput5 == "Cyber") {
     this.reputation = this.reputation + 5;
-    this.funding = this.funding + 1000;
+    this.funding = this.funding + 1500;
     console.log(this);
     return "5B";
   } else if (radioInput5 == "Nakedtruth") {
@@ -99,7 +98,7 @@ Candidate.prototype.choiceFive = function(radioInput5){
 Candidate.prototype.choiceSix = function(radioInput6){
   if (radioInput6 == "spotlight") {
     this.reputation = this.reputation + 2;
-    this.funding = this.funding - 500;
+    this.funding = this.funding - 100;
     console.log(this);
     return "6A";
   } else if (radioInput6 == "timbuktu") {
@@ -117,12 +116,12 @@ Candidate.prototype.choiceSix = function(radioInput6){
 Candidate.prototype.choiceSeven = function(radioInput7){
   if (radioInput7 == "Force") {
     this.reputation = this.reputation + 3;
-    this.funding = this.funding + 750;
+    this.funding = this.funding + 1000;
     console.log(this);
     return "7A";
   } else if (radioInput7 == "Accuse") {
     this.reputation = this.reputation - 5;
-    this.funding = this.funding + 100;
+    this.funding = this.funding + 500;
     console.log(this);
     return "7B";
   } else if (radioInput7 == "Maury") {
@@ -136,7 +135,7 @@ Candidate.prototype.choiceSeven = function(radioInput7){
 Candidate.prototype.choiceEight = function(radioInput8){
   if (radioInput8 == "grudge") {
     this.reputation = this.reputation - 2;
-    this.funding = this.funding - 500;
+    this.funding = this.funding - 250;
     console.log(this);
     return "8A";
   } else if (radioInput8 == "introspection") {
@@ -145,7 +144,7 @@ Candidate.prototype.choiceEight = function(radioInput8){
     return "8B";
   } else if (radioInput8 == "on-air") {
     this.reputation = this.reputation + 5;
-    this.funding = this.funding - 500;
+    this.funding = this.funding - 200;
     console.log(this);
     return "8C";
   }
@@ -154,12 +153,12 @@ Candidate.prototype.choiceEight = function(radioInput8){
 Candidate.prototype.choiceNine = function(radioInput9){
   if (radioInput9 == "public") {
     this.reputation = this.reputation + 7;
-    this.funding = this.funding + 1000;
+    this.funding = this.funding + 1500;
     console.log(this);
     return "9A";
   } else if (radioInput9 == "private") {
     this.reputation = this.reputation + 1;
-    this.funding = this.funding + 1000;
+    this.funding = this.funding + 1500;
     console.log(this);
     return "9B";
   }
@@ -168,7 +167,7 @@ Candidate.prototype.choiceNine = function(radioInput9){
 Candidate.prototype.choiceTen = function(radioInput10){
   if (radioInput10 == "me-first") {
     this.reputation = this.reputation - 5;
-    this.funding = this.funding - 1000;
+    this.funding = this.funding - 500;
     console.log(this);
     return "10A";
   } else if (radioInput10 == "handsome") {
@@ -178,8 +177,27 @@ Candidate.prototype.choiceTen = function(radioInput10){
   }
 };
 
+Candidate.prototype.choiceFinal = function(radioInputFinal){
+  if (radioInputFinal == "duty") {
+    this.reputation = this.reputation + 10;
+    this.funding = 0;
+    console.log(this);
+    return "FA";
+  } else if (radioInputFinal == "security") {
+    this.reputation = this.reputation - 5;
+    this.funding = 0;
+    console.log(this);
+    return "FB";
+  } else if (radioInputFinal == "kneecaps") {
+    this.reputation = this.reputation - 10;
+    this.funding = 0;
+    console.log(this);
+    return "FC";
+  }
+};
+
 Candidate.prototype.winLose = function() {
-  if (this.reputation >= 9) {
+  if (this.reputation >= 20) {
     victoryReveal();
   } else {
     lossReveal();
@@ -187,9 +205,9 @@ Candidate.prototype.winLose = function() {
 };
 
 Candidate.prototype.role = function() {
-  if (this.gender === "male") {
+  if (this.gender === "male" || this.gender === "Male") {
     this.playerTitle = "Congressman";
-  } else if (this.gender === "female") {
+  } else if (this.gender === "female" || this.gender === "Female") {
     this.playerTitle = "Congresswoman";
   } else {
     this.playerTitle = "Representative";
@@ -210,8 +228,10 @@ $(document).ready(function() {
   var turns = 0;
   nextDecision = function() {
     turns = turns + 1;
-    if (turns == 9) {
+    if (turns == 6 && newCandidate.funding > 0) {
       $("#finalDecision").show();
+    } else if (turns == 6 && newCandidate.funding <= 0) {
+      $("#campaignBroke").show();
     } else {
       var counter = Math.floor((Math.random() * decisionPoints.length) + 0);
       if (decisionPoints[counter] == 2) {
@@ -408,6 +428,7 @@ $(document).ready(function() {
     var choiceEight = newCandidate.choiceEight(radioInput8);
     $("#explanation" + choiceEight).show();
 
+    $(".firstName").append(newCandidate.firstName);
     $("button#decision8Button").hide();
     $("#prompt8").hide();
     $("#question8").hide();
@@ -463,7 +484,23 @@ $(document).ready(function() {
     $("#decision10").hide();
   });
 
-  $("#finalDecisionButton").click(function() {
+  $("button#finalDecisionButton").click(function() {
+    var radioInputFinal = $("input:radio[name=decfinalradio]:checked").val();
+    var choiceFinal = newCandidate.choiceFinal(radioInputFinal);
+    $("#explanation" + choiceFinal).show();
+
+    $("button#finalDecisionButton").hide();
+    $("#prompt-final").hide();
+    $("#question-final").hide();
+    $(".reputation-points").empty();
+    $(".reputation-points").append(newCandidate.reputation);
+    $(".funds").empty();
+    $(".funds").append(newCandidate.funding);
+    $("#viewResults").show();
+  })
+
+  $("#viewResults").click(function() {
+    $(".last-name").append(newCandidate.lastName);
     newCandidate.winLose();
     $("#finalDecision").hide();
   });

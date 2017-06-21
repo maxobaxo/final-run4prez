@@ -146,6 +146,10 @@ button {
   display: none;
 }
 
+#campaignBroke {
+  display: none;
+}
+
 .explanation {
   display: none;
   font-size: 20px;
