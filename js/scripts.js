@@ -234,6 +234,7 @@ $(document).ready(function() {
   };
 
   var turns = 0;
+  var decisionPoints = [2, 3, 4, 5, 6, 7, 8, 9, 10];
   nextDecision = function() {
     turns = turns + 1;
     if (turns == 6 && newCandidate.funding > 0) {
@@ -242,37 +243,10 @@ $(document).ready(function() {
       $("#campaignBroke").show();
     } else {
       var counter = Math.floor((Math.random() * decisionPoints.length) + 0);
-      if (decisionPoints[counter] == 2) {
-        $("#decision2").show();
-        decisionPoints.splice(counter, 1);
-      } else if (decisionPoints[counter] == 3) {
-          $("#decision3").show();
-          decisionPoints.splice(counter, 1);
-      } else if (decisionPoints[counter] == 4) {
-          $("#decision4").show();
-          decisionPoints.splice(counter, 1);
-      }  else if (decisionPoints[counter] == 5) {
-          $("#decision5").show();
-          decisionPoints.splice(counter, 1);
-      }  else if (decisionPoints[counter] == 6) {
-          $("#decision6").show();
-          decisionPoints.splice(counter, 1);
-      }  else if (decisionPoints[counter] == 7) {
-          $("#decision7").show();
-          decisionPoints.splice(counter, 1);
-      }  else if (decisionPoints[counter] == 8) {
-          $("#decision8").show();
-          decisionPoints.splice(counter, 1);
-      }  else if (decisionPoints[counter] == 9) {
-          $("#decision9").show();
-          decisionPoints.splice(counter, 1);
-      }  else if (decisionPoints[counter] == 10) {
-          $("#decision10").show();
-          decisionPoints.splice(counter, 1);
-      };
+      $("#decision" + decisionPoints[counter]).show();
+      decisionPoints.splice(counter, 1);
     }
-  }
-  var decisionPoints = [2, 3, 4, 5, 6, 7, 8, 9, 10]
+  };
 
   $("#register").submit(function(event) {
     event.preventDefault();
@@ -588,7 +562,7 @@ $(document).ready(function() {
       $(".reputation-points").append(newCandidate.reputation);
       if (newCandidate.reputation <= 0) {
         $(".reputation-points").text(0);
-      } 
+      }
       $(".funds").empty();
       $(".funds").append(newCandidate.funding);
       $("#viewResults").show();
