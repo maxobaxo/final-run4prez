@@ -262,6 +262,7 @@ $(document).ready(function() {
     if (filledForm === true) {
       var fullName = newCandidate.fullName();
       $(".title").text(newCandidate.role());
+      $(".firstName").text(newCandidate.firstName);
       $(".lastName").text(newCandidate.lastName);
       $("#intro").hide();
       $(".reputation-points").append(newCandidate.reputation);
@@ -473,7 +474,6 @@ $(document).ready(function() {
       var choiceEight = newCandidate.choiceEight(radioInput8);
       $("#explanation" + choiceEight).show();
 
-      $(".firstName").append(newCandidate.firstName);
       $("button#decision8Button").hide();
       $("#prompt8").hide();
       $("#question8").hide();
