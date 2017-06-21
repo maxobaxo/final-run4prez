@@ -281,6 +281,9 @@ $(document).ready(function() {
     var age = $("input#age").val();
     var gender = $("input#gender").val()
     newCandidate = new Candidate(firstName, lastName, age, gender);
+    if (age >= 35) {
+      newCandidate.reputation += 10;
+    }
     var filledForm = validateForm(firstName, lastName);
     if (filledForm === true) {
       var fullName = newCandidate.fullName();
