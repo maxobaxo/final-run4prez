@@ -197,7 +197,7 @@ Candidate.prototype.choiceFinal = function(radioInputFinal){
 };
 
 Candidate.prototype.winLose = function() {
-  if (this.reputation >= 20) {
+  if (this.reputation >= 35) {
     victoryReveal();
   } else {
     lossReveal();
