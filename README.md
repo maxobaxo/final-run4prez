@@ -17,17 +17,19 @@ This webpage is an interactive role-playing game where the user submits him or h
 * It can create a candidate based on user input.
  - Input: [firstName: Max, lastName: Aurelius, age: 25, gender: male]
  - Output: "Congressman Aurelius's Current Stats"
- * It can update and return the value of a candidate's reputation points and funding amount based on the candidate's new decision and its predetermined values.
+* It can return an alert if user submits incomplete input.
+ - Input: [Name:       ]
+ - Output: "You need to make a selection, silly-pants!"
+* It can update and return the value of a candidate's reputation points and funding amount based on the candidate's new decision and its predetermined values.
  - Input: Candidate with 5 Reputation Points and Funds: $500 makes new decision.
  - Output: Reputation Points: 10, Campaign Funds: $300
 * It can determine the winner of the election based on the candidate's cumulative reputation points.
  - Input: Reputation: 20 points
  - Output: "You win the election!"
 * It can force the candidate to withdraw from the race if (s)he ends the campaign with no liquid funds.
-- Input: Candidate reaches final decision with Campaign Funds: - $150
-- Output: "You are broke, you must withdraw"
+ - Input: Candidate reaches final decision with Campaign Funds: - $150
+ - Output: "You are broke, you must withdraw"
 * It can randomly decide which decision a candidate is forced to make.
-* It can set a limit on the number of decisions a candidate makes in their campaign, which allows for multiple unique user experiences.
 
 ### Technologies Used: ###
 html, Bootstrap, CSS, JavaScript, jQuery, GitHUb
