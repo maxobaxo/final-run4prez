@@ -284,6 +284,8 @@ $(document).ready(function() {
     } else {
       var choiceOne = newCandidate.choiceOne(radioInput1);
       $("#explanation" + choiceOne).show();
+      $("#decisionTitle1").hide();
+      $("#explanationHeader1").show();
 
       $("button#decision1Button").hide();
       $("#prompt1").hide();
@@ -311,6 +313,8 @@ $(document).ready(function() {
     } else {
       var choiceTwo = newCandidate.choiceTwo(radioInput2);
       $("#explanation" + choiceTwo).show();
+      $("#decisionTitle2").hide();
+      $("#explanationHeader2").show();
 
       $("button#decision2Button").hide();
       $("#prompt2").hide();
@@ -338,6 +342,8 @@ $(document).ready(function() {
     } else {
       var choiceThree = newCandidate.choiceThree(radioInput3);
       $("#explanation" + choiceThree).show();
+      $("#decisionTitle3").hide();
+      $("#explanationHeader3").show();
 
       $("button#decision3Button").hide();
       $("#prompt3").hide();
@@ -365,6 +371,8 @@ $(document).ready(function() {
     } else {
       var choiceFour = newCandidate.choiceFour(radioInput4);
       $("#explanation" + choiceFour).show();
+      $("#decisionTitle4").hide();
+      $("#explanationHeader4").show();
 
       $("button#decision4Button").hide();
       $("#prompt4").hide();
@@ -392,6 +400,8 @@ $(document).ready(function() {
     } else {
       var choiceFive = newCandidate.choiceFive(radioInput5);
       $("#explanation" + choiceFive).show();
+      $("#decisionTitle5").hide();
+      $("#explanationHeader5").show();
 
       $("button#decision5Button").hide();
       $("#prompt5").hide();
@@ -419,6 +429,8 @@ $(document).ready(function() {
     } else {
       var choiceSix = newCandidate.choiceSix(radioInput6);
       $("#explanation" + choiceSix).show();
+      $("#decisionTitle6").hide();
+      $("#explanationHeader6").show();
 
       $("button#decision6Button").hide();
       $("#prompt6").hide();
@@ -446,6 +458,8 @@ $(document).ready(function() {
     } else {
       var choiceSeven = newCandidate.choiceSeven(radioInput7);
       $("#explanation" + choiceSeven).show();
+      $("#decisionTitle7").hide();
+      $("#explanationHeader7").show();
 
       $("button#decision7Button").hide();
       $("#prompt7").hide();
@@ -473,6 +487,8 @@ $(document).ready(function() {
     } else {
       var choiceEight = newCandidate.choiceEight(radioInput8);
       $("#explanation" + choiceEight).show();
+      $("#decisionTitle8").hide();
+      $("#explanationHeader8").show();
 
       $("button#decision8Button").hide();
       $("#prompt8").hide();
@@ -500,6 +516,8 @@ $(document).ready(function() {
     } else {
       var choiceNine = newCandidate.choiceNine(radioInput9);
       $("#explanation" + choiceNine).show();
+      $("#decisionTitle9").hide();
+      $("#explanationHeader9").show();
 
       $("button#decision9Button").hide();
       $("#prompt9").hide();
@@ -527,6 +545,8 @@ $(document).ready(function() {
     } else {
       var choiceTen = newCandidate.choiceTen(radioInput10);
       $("#explanation" + choiceTen).show();
+      $("#decisionTitle10").hide();
+      $("#explanationHeader10").show();
 
       $("button#decision10Button").hide();
       $("#prompt10").hide();
@@ -554,6 +574,8 @@ $(document).ready(function() {
     } else {
       var choiceFinal = newCandidate.choiceFinal(radioInputFinal);
       $("#explanation" + choiceFinal).show();
+      $("#finalDecisionTitle").hide();
+      $("#finalExplanationHeader").show();
 
       $("button#finalDecisionButton").hide();
       $("#prompt-final").hide();

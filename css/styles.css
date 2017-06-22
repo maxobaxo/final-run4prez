@@ -182,3 +182,8 @@ button {
   display: none;
   font-size: 20px;
 }
+
+.explanationHeader {
+  display: none;
+  text-align: center;
+}
