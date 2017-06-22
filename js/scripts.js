@@ -47,16 +47,13 @@ Candidate.prototype.choiceThree = function(radioInput3){
   if (radioInput3 == "attack") {
     this.reputation = this.reputation + 0;
     this.funding = this.funding - 250;
-    console.log(this);
     return "3A";
   } else if (radioInput3 == "giveup") {
     this.reputation = this.reputation - 6;
-    console.log(this);
     return "3B";
   } else if (radioInput3 == "defend") {
     this.reputation = this.reputation + 6;
     this.funding = this.funding - 500;
-    console.log(this);
     return "3C";
   }
 };
@@ -65,15 +62,12 @@ Candidate.prototype.choiceFour = function(radioInput4){
   if (radioInput4 == "tweet-back") {
     this.reputation = this.reputation + 0;
     this.funding = this.funding - 200;
-    console.log(this);
     return "4A";
   } else if (radioInput4 == "retweet") {
     this.reputation = this.reputation - 6;
-    console.log(this);
     return "4B";
   } else if (radioInput4 == "ignore") {
     this.reputation = this.reputation + 6;
-    console.log(this);
     return "4C";
   }
 };
@@ -81,16 +75,13 @@ Candidate.prototype.choiceFour = function(radioInput4){
 Candidate.prototype.choiceFive = function(radioInput5){
   if (radioInput5 == "Decline") {
     this.reputation = this.reputation + 4;
-    console.log(this);
     return "5A";
   } else if (radioInput5 == "Cyber") {
     this.reputation = this.reputation + 10;
     this.funding = this.funding + 1500;
-    console.log(this);
     return "5B";
   } else if (radioInput5 == "Nakedtruth") {
     this.reputation = this.reputation + 14;
-    console.log(this);
     return "5C";
   }
 };
@@ -99,16 +90,13 @@ Candidate.prototype.choiceSix = function(radioInput6){
   if (radioInput6 == "spotlight") {
     this.reputation = this.reputation + 4;
     this.funding = this.funding - 100;
-    console.log(this);
     return "6A";
   } else if (radioInput6 == "timbuktu") {
     this.reputation = this.reputation - 10;
-    console.log(this);
     return "6B";
   } else if (radioInput6 == "prFirm") {
     this.reputation = this.reputation + 10;
     this.funding = this.funding - 500;
-    console.log(this);
     return "6C";
   }
 };
@@ -117,17 +105,14 @@ Candidate.prototype.choiceSeven = function(radioInput7){
   if (radioInput7 == "Force") {
     this.reputation = this.reputation + 6;
     this.funding = this.funding + 1000;
-    console.log(this);
     return "7A";
   } else if (radioInput7 == "Accuse") {
     this.reputation = this.reputation - 10;
     this.funding = this.funding + 500;
-    console.log(this);
     return "7B";
   } else if (radioInput7 == "Maury") {
     this.reputation = this.reputation + 15;
     this.funding = this.funding - 500;
-    console.log(this);
     return "7C";
   }
 };
@@ -136,16 +121,13 @@ Candidate.prototype.choiceEight = function(radioInput8){
   if (radioInput8 == "grudge") {
     this.reputation = this.reputation - 4;
     this.funding = this.funding - 250;
-    console.log(this);
     return "8A";
   } else if (radioInput8 == "introspection") {
     this.reputation = this.reputation + 0;
-    console.log(this);
     return "8B";
   } else if (radioInput8 == "on-air") {
     this.reputation = this.reputation + 10;
     this.funding = this.funding - 200;
-    console.log(this);
     return "8C";
   }
 };
@@ -154,12 +136,10 @@ Candidate.prototype.choiceNine = function(radioInput9){
   if (radioInput9 == "public") {
     this.reputation = this.reputation + 10;
     this.funding = this.funding + 1500;
-    console.log(this);
     return "9A";
   } else if (radioInput9 == "private") {
     this.reputation = this.reputation + 2;
     this.funding = this.funding + 1500;
-    console.log(this);
     return "9B";
   }
 };
@@ -168,11 +148,9 @@ Candidate.prototype.choiceTen = function(radioInput10){
   if (radioInput10 == "me-first") {
     this.reputation = this.reputation - 10;
     this.funding = this.funding - 500;
-    console.log(this);
     return "10A";
   } else if (radioInput10 == "handsome") {
     this.reputation = this.reputation + 15;
-    console.log(this);
     return "10B";
   }
 };
@@ -181,17 +159,14 @@ Candidate.prototype.choiceFinal = function(radioInputFinal){
   if (radioInputFinal == "duty") {
     this.reputation = this.reputation + 15;
     this.funding = 0;
-    console.log(this);
     return "FA";
   } else if (radioInputFinal == "security") {
     this.reputation = this.reputation - 10;
     this.funding = 0;
-    console.log(this);
     return "FB";
   } else if (radioInputFinal == "kneecaps") {
     this.reputation = this.reputation - 15;
     this.funding = 0;
-    console.log(this);
     return "FC";
   }
 };
