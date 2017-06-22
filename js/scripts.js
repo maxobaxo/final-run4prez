@@ -265,11 +265,11 @@ $(document).ready(function() {
       $(".firstName").text(newCandidate.firstName);
       $(".lastName").text(newCandidate.lastName);
       $("#intro").hide();
-      $(".reputation-points").append(newCandidate.reputation);
+      $(".reputation-points").text(newCandidate.reputation);
       if (newCandidate.reputation <= 0) {
         $(".reputation-points").text(0);
       }
-      $(".funds").append(newCandidate.funding);
+      $(".funds").text(newCandidate.funding);
       $("#status").show();
       $("#decision1").show();
     } else {
@@ -290,13 +290,11 @@ $(document).ready(function() {
       $("button#decision1Button").hide();
       $("#prompt1").hide();
       $("#question1").hide();
-      $(".reputation-points").empty();
-      $(".reputation-points").append(newCandidate.reputation);
+      $(".reputation-points").text(newCandidate.reputation);
       if (newCandidate.reputation <= 0) {
         $(".reputation-points").text(0);
       }
-      $(".funds").empty();
-      $(".funds").append(newCandidate.funding);
+      $(".funds").text(newCandidate.funding);
       $("button#moveon1Button").show();
     }
   });
@@ -319,13 +317,11 @@ $(document).ready(function() {
       $("button#decision2Button").hide();
       $("#prompt2").hide();
       $("#question2").hide();
-      $(".reputation-points").empty();
-      $(".reputation-points").append(newCandidate.reputation);
+      $(".reputation-points").text(newCandidate.reputation);
       if (newCandidate.reputation <= 0) {
         $(".reputation-points").text(0);
       }
-      $(".funds").empty();
-      $(".funds").append(newCandidate.funding);
+      $(".funds").text(newCandidate.funding);
       $("button#moveon2Button").show();
     }
   });
@@ -348,13 +344,11 @@ $(document).ready(function() {
       $("button#decision3Button").hide();
       $("#prompt3").hide();
       $("#question3").hide();
-      $(".reputation-points").empty();
-      $(".reputation-points").append(newCandidate.reputation);
+      $(".reputation-points").text(newCandidate.reputation);
       if (newCandidate.reputation <= 0) {
         $(".reputation-points").text(0);
       }
-      $(".funds").empty();
-      $(".funds").append(newCandidate.funding);
+      $(".funds").text(newCandidate.funding);
       $("button#moveon3Button").show();
     }
   });
@@ -377,13 +371,11 @@ $(document).ready(function() {
       $("button#decision4Button").hide();
       $("#prompt4").hide();
       $("#question4").hide();
-      $(".reputation-points").empty();
-      $(".reputation-points").append(newCandidate.reputation);
+      $(".reputation-points").text(newCandidate.reputation);
       if (newCandidate.reputation <= 0) {
         $(".reputation-points").text(0);
       }
-      $(".funds").empty();
-      $(".funds").append(newCandidate.funding);
+      $(".funds").text(newCandidate.funding);
       $("button#moveon4Button").show();
     }
   });
@@ -406,13 +398,11 @@ $(document).ready(function() {
       $("button#decision5Button").hide();
       $("#prompt5").hide();
       $("#question5").hide();
-      $(".reputation-points").empty();
-      $(".reputation-points").append(newCandidate.reputation);
+      $(".reputation-points").text(newCandidate.reputation);
       if (newCandidate.reputation <= 0) {
         $(".reputation-points").text(0);
       }
-      $(".funds").empty();
-      $(".funds").append(newCandidate.funding);
+      $(".funds").text(newCandidate.funding);
       $("button#moveon5Button").show();
     }
   });
@@ -435,13 +425,11 @@ $(document).ready(function() {
       $("button#decision6Button").hide();
       $("#prompt6").hide();
       $("#question6").hide();
-      $(".reputation-points").empty();
-      $(".reputation-points").append(newCandidate.reputation);
+      $(".reputation-points").text(newCandidate.reputation);
       if (newCandidate.reputation <= 0) {
         $(".reputation-points").text(0);
       }
-      $(".funds").empty();
-      $(".funds").append(newCandidate.funding);
+      $(".funds").text(newCandidate.funding);
       $("button#moveon6Button").show();
     }
   });
@@ -464,13 +452,11 @@ $(document).ready(function() {
       $("button#decision7Button").hide();
       $("#prompt7").hide();
       $("#question7").hide();
-      $(".reputation-points").empty();
-      $(".reputation-points").append(newCandidate.reputation);
+      $(".reputation-points").text(newCandidate.reputation);
       if (newCandidate.reputation <= 0) {
         $(".reputation-points").text(0);
       }
-      $(".funds").empty();
-      $(".funds").append(newCandidate.funding);
+      $(".funds").text(newCandidate.funding);
       $("button#moveon7Button").show();
     }
   });
@@ -493,13 +479,11 @@ $(document).ready(function() {
       $("button#decision8Button").hide();
       $("#prompt8").hide();
       $("#question8").hide();
-      $(".reputation-points").empty();
-      $(".reputation-points").append(newCandidate.reputation);
+      $(".reputation-points").text(newCandidate.reputation);
       if (newCandidate.reputation <= 0) {
         $(".reputation-points").text(0);
       }
-      $(".funds").empty();
-      $(".funds").append(newCandidate.funding);
+      $(".funds").text(newCandidate.funding);
       $("button#moveon8Button").show();
     }
   });
@@ -522,13 +506,11 @@ $(document).ready(function() {
       $("button#decision9Button").hide();
       $("#prompt9").hide();
       $("#question9").hide();
-      $(".reputation-points").empty();
-      $(".reputation-points").append(newCandidate.reputation);
+      $(".reputation-points").text(newCandidate.reputation);
       if (newCandidate.reputation <= 0) {
         $(".reputation-points").text(0);
       }
-      $(".funds").empty();
-      $(".funds").append(newCandidate.funding);
+      $(".funds").text(newCandidate.funding);
       $("button#moveon9Button").show();
     }
   });
@@ -551,13 +533,11 @@ $(document).ready(function() {
       $("button#decision10Button").hide();
       $("#prompt10").hide();
       $("#question10").hide();
-      $(".reputation-points").empty();
-      $(".reputation-points").append(newCandidate.reputation);
+      $(".reputation-points").text(newCandidate.reputation);
       if (newCandidate.reputation <= 0) {
         $(".reputation-points").text(0);
       }
-      $(".funds").empty();
-      $(".funds").append(newCandidate.funding);
+      $(".funds").text(newCandidate.funding);
       $("button#moveon10Button").show();
     }
   });
@@ -580,13 +560,11 @@ $(document).ready(function() {
       $("button#finalDecisionButton").hide();
       $("#prompt-final").hide();
       $("#question-final").hide();
-      $(".reputation-points").empty();
-      $(".reputation-points").append(newCandidate.reputation);
+      $(".reputation-points").text(newCandidate.reputation);
       if (newCandidate.reputation <= 0) {
         $(".reputation-points").text(0);
       }
-      $(".funds").empty();
-      $(".funds").append(newCandidate.funding);
+      $(".funds").text(newCandidate.funding);
       $("#viewResults").show();
     }
   });
