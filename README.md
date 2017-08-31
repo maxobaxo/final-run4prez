@@ -1,4 +1,4 @@
-# Run 4 Prez #
+# Run for President #
 An exercise for Intro to Programming at Epicodus | 06.21.17
 
 By Rena Rallis, Max Scher, Steve Spitz, Nathan Stewart
